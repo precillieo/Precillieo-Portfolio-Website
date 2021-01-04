@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class= "intro" id= "home">
+	<h1 class= "section__title section__title--intro">
+		Hi, I am <strong>Precious Kolawole</strong>
+	</h1>
+	<p class = "section__subtitle section__subtitle--intro"> Data Scientist</p>
+	<img src="static/propict.jpg" alt="picture of Precious'face"class= "intro__img">
+</section>
+
+<!--<ul>
+	<li>A Health Technology Enthusiast</li>
+	<li>A Data Scientist</li>
+	<li>An Aspiring Dermatologist</li>
+	<li>A Machine Learning Engineer</li>
+</ul>-->
+
+<section class ="" id= "work">
+	<div class= "portfolio">
+		<h2 class= "section__title">My Latest Project</h2>
+	    <p class= "section__subtitle section__subtitle--work">Full Featured Blog Web App with Python Flask</p>
+
+
+		<a target="_blank" href="https://kola-blog.herokuapp.com/" class= "">
+			<img src="static/another.jpg" alt="" class= "portfolio__img">
+		</a>
+		<p>
+			<a target="_blank" class="btn" href="{{ url_for('portfolio') }}">This way</a>
+			to see more of my projects
+		</p>
+
+	</div>
+	<div class= "portfolio__right">
+		<h2 class= "section__title"> My Latest Blog Post</h2>
+		<p class= "section__subtitle section__subtitle--work">Convolutional Neural Network For Detecting Cancer Tumors In Microscopic Images</p>
+		<a target="_blank" href="https://youtu.be/Pfgfh4DJToo" class= "">
+			<img src="static/cnnthr.jpg" alt="" class="portfolio__img">
+		</a>
+		<p>And
+			<a target="_blank" class= "btn" href="https://precillieo.medium.com/">this way</a>
+			to see more of my articles
+		</p>
+	</div>
+</section>
+{% endblock %}
