@@ -33,7 +33,6 @@
 
 .btn {
 	display: inline-block;
-	padding: .5em 1.5em;
 	background: var(--clr-accent);
 	color: var(--clr-dark);
 	text-decoration: none;
@@ -72,6 +71,10 @@ body{
 	line-height: 1.6;
 }
 
+p {
+	color: var(--clr-light);
+}
+
 section{
 	padding: 5em 2em;
 }
@@ -96,6 +99,11 @@ h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+
+.navbar {
+	padding: 0 !important;
+	background-color: black;
+}
 
 .section__title{
 	margin-bottom: .25em;
@@ -156,7 +164,7 @@ h3 { font-size: var(--fs-h3) }
 		grid-template-areas: 
 			"img title"
 			"img subtitle";
-		grid-template-columns: min-content max-content;
+		grid-template-columns: min-content;
 	}
 
 	.intro__img {
@@ -194,16 +202,17 @@ h3 { font-size: var(--fs-h3) }
 
 .infos{
 	margin-bottom: 6em;
+	 display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    color: rgb(0, 0, 0);
+    gap: 4em;
 }
 
 .info{
-	max-width: 700px;
-	margin: 0 auto;
-	width: 500px;
+	height: 15em;
     border: 1px solid #ccc;
     border-color: var(--clr-accent);
     border-radius: 10px;
-    margin: 15px 7px;
     padding: 6px;
 }
 
@@ -213,17 +222,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
-@media (min-width: 800px) {
-	.infos {
-		display: flex;
-		max-width: 1500px;
-		margin: 0 auto;
-	}
 
-	.info + .info {
-		margin-left: 4em;
-	} 
-}
 
 
 
@@ -250,12 +249,17 @@ h3 { font-size: var(--fs-h3) }
 
 .services {
 	margin-bottom: 4em;
+	 margin-top: 3em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    color: rgb(0, 0, 0);
+    gap: 4em;
 }
 
 .service {
-	max-width: 500px;
+	height: 20em;
 	margin: 0 auto;
-	width: 500px;
     border: 1px solid #ccc;
     border-color: var(--clr-accent);
     border-radius: 10px;
@@ -270,17 +274,6 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
-@media (min-width: 800px) {
-	.services {
-		display: flex;
-		max-width: 1000px;
-		margin: 0 auto;
-	}
-
-	.service + .service {
-		margin-left: 2em;
-	}
-}
 
 
 /* About me section */
@@ -291,6 +284,10 @@ h3 { font-size: var(--fs-h3) }
 
 .about-me__img {
 	box-shadow: var(--bs);
+}
+.about-me__paragraph {
+	margin-top: 2em;
+	line-height: 1.8em;
 }
 
 @media (min-width: 800px) {
@@ -337,35 +334,38 @@ h3 { font-size: var(--fs-h3) }
 }
 
 
+
 .portfolios{
 	margin-bottom: 6em;
-	width: 100%;
-	overflow: hidden;
 	text-align: center;
 	margin: 30px 30px 30px 30px;
-	max-width: 1500px;
+	
 }
 
 .portfolio{
-	position: absolute;
-	max-width: 500px;
-	width: 450px;
-	margin-left: 70px;
-	float: left;
+	padding: 4em;
+	width: 50%;
 	
 }
 
 
-.portfolio__right{
-	position: relative;
-	max-width: 500px;
-	width: 450px;
-	margin: 20px;
-	margin-left: 700px;
+
+
+.portfolios {
+	display: flex;
+	margin: 3em 1em ;
 }
 
+.portfolio__image {
+	width: 100%;
+	height: 20em;
+}
+
+
 .portfolio__img {
-		position: relative;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;;
 		border: 1px solid #ccc;
     	border-color: var(--clr-accent);
 		z-index: 2;
@@ -378,12 +378,25 @@ h3 { font-size: var(--fs-h3) }
 
 
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
 	.portfolios {
-		margin: 0 auto;
-		max-width: 1500px;
-		justify-content: center;
-		z-index: 2;
+		flex-direction: column;
+		margin: 1em;
+		padding:0;
+	}
+
+.portfolio{
+	width: 100%;
+		padding: 1em;
+	
+}
+
+
+.portfolio__right{
+		margin-top: 3em;
+	padding: 1em;
+}
+	.work {
 	}
 
 }
@@ -395,6 +408,7 @@ h3 { font-size: var(--fs-h3) }
 
 
 .my-port {
+	padding: 1em;
 	background-image: url(../static/up.jpg);
 	background-size: cover;
 	background-blend-mode: multiply;
@@ -402,6 +416,32 @@ h3 { font-size: var(--fs-h3) }
 	margin-top: 70px;
 
 }
+
+/*----- 
+
+My Portfolio
+
+---*/
+
+.my-portfolios {
+	margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    color: rgb(0, 0, 0);
+    gap: 4em;
+}
+
+.my-portfolio {
+	padding: 2em;
+}
+@media (max-width: 800px) {
+	.my-portfolio {
+		padding: 0;
+	}
+	
+}
+
+
 
 /* Contact Section */
 
@@ -416,6 +456,7 @@ h3 { font-size: var(--fs-h3) }
 .my-contact-subtitle{
 	text-align: center;
 	margin-top: 30px;
+	padding: 1em;
 }
 
 
@@ -446,7 +487,7 @@ h3 { font-size: var(--fs-h3) }
  
 
 .contact {
-	margin-top: 70px;
+	margin: 70px 0;
 	text-align: center;
 
 }
@@ -458,12 +499,38 @@ h3 { font-size: var(--fs-h3) }
 
 .skills
 {
-    font-size: 12px;
+    font-size: .6em;
+    color: white;
+
 }
 
 .story {
 	font-size: 15px;
 }
+
+
+/* ---------------
+
+Section Styles
+
+
+---------------*/
+
+@media (max-width: 1024px) {
+	.portfolio {
+		padding: 1em;
+	}
+	.section__title {
+		font-size: 1.5em;
+	}
+
+	.section__subtitle {
+		font-size: 1em;
+	}
+}
+
+
+
 
 
 
@@ -481,6 +548,7 @@ h3 { font-size: var(--fs-h3) }
 {
     min-height:100%;
     min-width:100%;
+    background-color: black;
 }
 
 .timeline {
@@ -572,6 +640,9 @@ h3 { font-size: var(--fs-h3) }
   border: 2px solid #DAA520;
   border-radius: 6px;
 }
+.content li {
+	padding: 1em 0;
+}
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 800px) {
@@ -579,7 +650,7 @@ h3 { font-size: var(--fs-h3) }
   .timeline::after {
     left: 31px;
     margin-left: -5px;
-  }
+  }                                                                              
 
 /* Full-width containers */
 .container-timeline {
