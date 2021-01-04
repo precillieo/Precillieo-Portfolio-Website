@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang= "en">
+ <head>
+ 	<meta charset="utf-8"></meta>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+
+	<title>Precillieo's Blog</title>
+ </head>
+ <body>
+	<header class="site-header">
+	  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+	  	<div class="container">
+	  		<!--<a class="navbar-brand mr-4" href="/"></a>-->
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+	  			<span class="navbar-toggler-icon"></span>
+	      	</button>
+	      	<div class="collapse navbar-collapse" id="navbarToggle">
+	      		<div class="navbar-nav mr-auto topnav-right">
+	      			<a href="{{ url_for('home') }}"> Home</a>
+					<a href="{{ url_for('about') }}"> About</a>
+					<a href="{{ url_for('portfolio') }}">Portfolio</a>
+					<a target= "_blank" href="https://medium.com/@precillieo">Blog</a>
+					<a href="{{ url_for('contact') }}">Contact Me</a>
+				</div>
+			</div>
+		</div>
+	  </nav>
+    </header>
+
+		<!--</div>
+		</div>
+	  </nav>
+	</header>-->
+
+	{% block content %}
+	{% endblock %}
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <footer class="copyright text-center text-muted"> Copyright &copy; 2021 | 18yrs old Data Scientist</footer>
+ </body>
+</html>
