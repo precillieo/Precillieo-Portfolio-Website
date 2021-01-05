@@ -75,6 +75,10 @@ p {
 	color: var(--clr-light);
 }
 
+small{
+	color: var(--clr-light);
+}
+
 section{
 	padding: 5em 2em;
 }
