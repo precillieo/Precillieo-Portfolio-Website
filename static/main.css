@@ -426,7 +426,7 @@ My Portfolio
 .my-portfolios {
 	margin-top: 3em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(19em, 2fr));
     color: rgb(0, 0, 0);
     gap: 4em;
 }
