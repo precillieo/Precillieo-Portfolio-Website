@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: : border-box;
+	box-sizing: border-box;
 }
 
 .white{
@@ -11,7 +11,6 @@
 :root {
 	--ff-primary: 'Lora', serif;
 	--ff-secondary: 'Roboto Slab', serif;
-
 	--fw-reg: 300;
 	--fw-bold: 900;
 
@@ -242,7 +241,7 @@ h3 { font-size: var(--fs-h3) }
 	position: relative;
 }
 
-.section__title--services:: after {
+.section__title--services::after {
 	content: '';
 	display: block;
 	height: 2px;
@@ -400,10 +399,11 @@ h3 { font-size: var(--fs-h3) }
 		margin-top: 3em;
 	padding: 1em;
 }
-	.work {
-	}
+	/* .work {
+		/*  */
+	} */
 
-}
+/* } */
 
 .port {
 	margin-top: 30px;
@@ -710,4 +710,6 @@ footer {
 
 .topnav-right {
   right:0;
+}
+
 }
