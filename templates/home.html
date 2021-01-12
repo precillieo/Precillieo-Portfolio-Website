@@ -1,48 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<section class= "intro" id= "home">
-	<h1 class= "section__title section__title--intro">
-		Hi, I am <strong>Precious Kolawole</strong>
+<section class="p-home-container">
+	<h1 class="hero_text">
+		Hi, I am Precious Kolawole.
 	</h1>
-	<p class = "section__subtitle section__subtitle--intro"> Data Scientist</p>
-	<img src="static/propict.jpg" alt="picture of Precious'face"class= "intro__img">
+	<div class="hero_text_summary">
+		<p class="intro_text">Am a Data Scientist and a Machine Learning Engineer. I love extracting knowledge and
+			insights
+			from structured and unstructured data</p>
+	</div>
+	<div class="cta_btn_container">
+		<a href="{{url_for('portfolio')}}" class="cta_link">
+			<div class="cta_button d-flex align-item-center justify-content-center">
+				<p class="cta_link_text">See my works</p>
+				<div class="icon-caret-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+						height="16">
+						<path fill-rule="evenodd"
+							d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z">
+						</path>
+					</svg></div>
+			</div>
+		</a>
+	</div>
+	<!-- <img src="static/propict.jpg" alt="picture of Precious'face" class="intro__img"> -->
+	<img src="https://res.cloudinary.com/dahn8uiyc/image/upload/v1610398033/assets/handwave_ryizi9.jpg" alt="hand">
+	<img src="https://res.cloudinary.com/dahn8uiyc/image/upload/v1610398034/assets/zeus_tlnlry.png" alt="bolt">
 </section>
 
-<!--<ul>
-	<li>A Health Technology Enthusiast</li>
-	<li>A Data Scientist</li>
-	<li>An Aspiring Dermatologist</li>
-	<li>A Machine Learning Engineer</li>
-</ul>-->
-
-<section class ="work portfolios" id= "work">
-	<div class= "portfolio">
-		<h2 class= "section__title">My Latest Project</h2>
-	    <p class= "section__subtitle section__subtitle--work">Full Featured Blog Web App with Python Flask</p>
-	    <div class="portfolio__image">
-	    	<a target="_blank" href="https://kola-blog.herokuapp.com/" class= "">
-	    		<img src="static/another.jpg" alt="" class= "portfolio__img">
-			</a>
-		</div>
-		<p>
-			<a target="_blank" class="btn" href="{{ url_for('portfolio') }}">This way</a>
-			to see more of my projects
-		</p>
-
-	</div>
-	<div class= "portfolio portfolio--right">
-		<h2 class= "section__title"> My Latest Blog Post</h2>
-		<p class= "section__subtitle section__subtitle--work">Convolutional Neural Network For Detecting Cancer Tumors In Microscopic Images</p>
-		<div class="portfolio__image">
-			<a target="_blank" href="https://youtu.be/Pfgfh4DJToo" class= "">
-				<img src="static/cnnthr.jpg" alt="" class="portfolio__img">
-			</a>
-		</div>
-		<p>And
-			<a target="_blank" class= "btn" href="https://precillieo.medium.com/">this way</a>
-			to see more of my articles
-		</p>
-	</div>
-</section>
 {% endblock %}
