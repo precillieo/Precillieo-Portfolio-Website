@@ -6,13 +6,14 @@
 		Hi, I am Precious Kolawole.
 	</h1>
 	<div class="hero_text_summary">
-		<p class="intro_text">Am a Data Scientist and a Machine Learning Engineer. I love extracting knowledge and
+		<p class="intro_text">Am a data scientist and a machine learning engineer.<br> I love extracting knowledge and
 			insights
-			from structured and unstructured data</p>
+			from<br> structured and unstructured data.<br> I love using my skills in technology to <br> find trends,
+			patterns, and manage data.</p>
 	</div>
-	<div class="cta_btn_container">
+	<div class="cta_btn_container position-absolute">
 		<a href="{{url_for('portfolio')}}" class="cta_link">
-			<div class="cta_button d-flex align-item-center justify-content-center">
+			<div class="cta_button d-flex align-items-center justify-space-evenly">
 				<p class="cta_link_text">See my works</p>
 				<div class="icon-caret-left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
 						height="16">
@@ -23,9 +24,12 @@
 			</div>
 		</a>
 	</div>
-	<!-- <img src="static/propict.jpg" alt="picture of Precious'face" class="intro__img"> -->
-	<img src="https://res.cloudinary.com/dahn8uiyc/image/upload/v1610398033/assets/handwave_ryizi9.jpg" alt="hand">
-	<img src="https://res.cloudinary.com/dahn8uiyc/image/upload/v1610398034/assets/zeus_tlnlry.png" alt="bolt">
+	<div class="hero_img_container position-absolute">
+		<img src="static/propict.jpg" class="hero_img position-relative" alt="picture of Precious'face">
+	</div>
+	<!-- <div class="ze position-relative">
+		<img src="https://res.cloudinary.com/dahn8uiyc/image/upload/v1610398034/assets/zeus_tlnlry.png" alt="bolt">
+	</div> -->
 </section>
 
 {% endblock %}
