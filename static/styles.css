@@ -10,11 +10,11 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 
 @font-face {
   font-family: Eina;
-  src: url("https://res.cloudinary.com/dahn8uiyc/raw/upload/v1610397308/assets/Eina02-Regular_pndeni.otf") format("opentype");
+  src: url("https://res.cloudinary.com/dahn8uiyc/raw/upload/v1610451593/assets/Eina01-Regular_eqvojd.otf") format("opentype");
 }
 @font-face {
   font-family: Eina-bold;
-  src: url("https://res.cloudinary.com/dahn8uiyc/raw/upload/v1610397308/assets/Eina02-Bold_ufw8dn.otf") format("opentype");
+  src: url("https://res.cloudinary.com/dahn8uiyc/raw/upload/v1610451593/assets/Eina01-Bold_sdssoc.otf") format("opentype");
 }
 body {
   width: 100%;
@@ -50,10 +50,42 @@ body {
 }
 
 .meta_img {
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 6rem !important;
+  height: 6rem !important;
   -o-object-fit: cover !important;
      object-fit: cover !important;
+}
+
+.hero_img_container {
+  width: auto;
+  height: auto;
+  background-color: rgba(153, 160, 151, 0.5);
+  top: 8rem;
+  left: 60%;
+  padding: 1rem 0.5rem 0 0.5rem;
+  border-radius: 100%;
+}
+.hero_img_container .hero_img {
+  width: 130px;
+  height: 130px;
+  top: -30px;
+  left: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  z-index: 300;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.ze {
+  top: 85px;
+  left: 0;
+}
+.ze img {
+  width: 40px;
+  height: 200px;
 }
 
 .flex-wrap {
@@ -76,8 +108,13 @@ body {
   position: relative;
 }
 
+.position-absolute {
+  position: absolute;
+}
+
 .site-header {
-  border: 1px solid red;
+  padding: 0.5rem 0;
+  margin: 2rem 0;
   width: 100%;
 }
 .site-header .nav_bar_lg {
@@ -86,9 +123,22 @@ body {
 .site-header .nav_bar_lg .desktop_nav_menu a {
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
-  font-weight: 500;
-  color: #586069;
-  margin-right: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin-right: 1.5rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+}
+.site-header .nav_bar_lg .desktop_nav_menu a .active {
+  border-bottom: 2px solid #1074E7;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.site-header .nav_bar_lg .m-nav-toggle-container .navbar-toggler {
+  background-color: white;
+  outline: none;
+  border: none;
+  display: none;
 }
 
 .mobile_nav_menu {
@@ -126,39 +176,74 @@ body {
 
 .p-home-container {
   position: relative;
+  margin: 0.5rem 0;
+  height: auto;
 }
 .p-home-container .hero_text {
   font-size: 3rem;
   font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: inherit;
+  margin: 5rem 0 2rem 0;
+}
+.p-home-container .hero_text_summary {
+  margin: 0 0 2rem 0;
 }
 .p-home-container .hero_text_summary .intro_text {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: inherit;
+  color: #586069;
 }
 .p-home-container .cta_btn_container {
   display: block;
-  position: relative;
-  top: 2rem;
+  outline: none;
+  top: 17rem;
+}
+.p-home-container .cta_btn_container .cta_link {
+  text-decoration: none;
 }
 .p-home-container .cta_btn_container .cta_link .cta_button {
   background-color: #555;
   padding: 0.8rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
 }
 .p-home-container .cta_btn_container .cta_link .cta_button .cta_link_text {
   color: #fff;
+  font-size: 0.9rem;
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.p-home-container .cta_btn_container .cta_link .cta_button .cta-caret-left {
-  color: #fff;
+.p-home-container .cta_btn_container .cta_link .cta_button .icon-caret-left {
+  background-color: white;
+  display: flex;
+  border-radius: 100%;
+  margin-left: 0.5rem;
+  align-items: center;
+  padding: 0.03rem;
+}
+.p-home-container .cta_btn_container .cta_link .cta_button .icon-caret-left svg {
+  color: transparent;
 }
 
-.my-work .portfolio_container {
-  font-size: 0.75rem;
+.portfolio-intro {
+  margin: 2rem 0;
+}
+.portfolio-intro .portfolio_intro_text {
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #586069;
+  font-size: 0.9rem;
+}
+
+.my-work .portfolio_title {
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+.my-work .portfolio_container {
   width: 100%;
   height: auto;
+  margin: 2rem 0;
 }
 .my-work .portfolio_container .portfolio_items {
   border: 1px solid gainsboro;
@@ -172,18 +257,25 @@ body {
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .title {
   margin: 0.4rem 0;
-  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .description {
   margin: 0.4rem 0;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+  color: #586069;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .languages {
-  margin: 0.4rem 0;
+  margin: 1rem 0;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #586069;
+  font-size: 0.8rem;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links {
-  margin: 0.4rem 0;
+  margin: 0.5rem 0;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links .blog_link {
   margin: 0 0.5rem 0 0;
@@ -191,10 +283,53 @@ body {
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links .blog_link a {
   text-decoration: none;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+}
+.my-work .portfolio_container .portfolio_items .portfolio_detail .links .blog_link a:hover {
+  color: #1074E7;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links .github a {
   text-decoration: none;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.my-work .portfolio_container .portfolio_items .portfolio_detail .links .github a:hover {
+  color: #1074E7;
+}
+
+.sub_heading {
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.my-contact-subtitle {
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #586069;
+}
+
+.contact {
+  margin: 3rem 0;
+  line-height: 1.5;
+}
+.contact .contact_link {
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  color: #586069;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+.contact .contact_link:hover {
+  color: #1074E7;
+}
+
+.p-footer {
+  margin: 1rem 0;
+}
+.p-footer .footer_credit p {
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
 }
 
 @media screen and (max-width: 750px) {

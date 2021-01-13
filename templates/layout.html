@@ -43,7 +43,7 @@
 				<button class="navbar-toggler" type="button" role="button" aria-controls="navbarToggle"
 					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-							width="16" height="16">
+							width="24" height="24">
 							<path fill-rule="evenodd"
 								d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
 							</path>
@@ -71,9 +71,11 @@
 	{% block content %}
 	{% endblock %}
 
-	<footer class="p-footer">
-		<div class="footer_credit">Copyright &copy; <span class="currentYear"></span> | 18yrs old
-			Data Scientist</div>
+	<footer class="p-footer d-flex justify-content-center">
+		<div class="footer_credit">
+			<!-- <p>Copyright &copy; <span class="currentYear"></span> | Web app built by 18 years old
+				Data Scientist</p> -->
+		</div>
 	</footer>
 	<script src="static/main.js"></script>
 </body>
