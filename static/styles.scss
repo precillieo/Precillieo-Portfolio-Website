@@ -275,7 +275,7 @@ body {
                 .languages {
                    margin: 1rem 0;
                    font-family: $para-font;
-                   color: #586069;
+                   color: black;
                    font-size: 0.8rem;
                 }
                 .links {
@@ -305,6 +305,38 @@ body {
         }
     }
 }
+// About page
+.about-me {
+    .skill_tags {
+        display: flex;
+        margin: 0.6rem 0;
+        .tags {
+            margin-right: 1rem;
+            background-color: #f1f8ff;
+            padding: 0.25rem 0.8rem;
+            border-radius: 2rem;
+            color: #1074E7;
+            font-size: 0.9rem;
+            font-family: $para-font;
+        }
+    }
+}
+
+.profile_container {
+    margin: 2rem 0;
+    .details_left {
+        margin-right: 4rem;
+        .avatar_container {
+            img {
+                width: 150px;
+                height: 200px;
+                object-fit: contain;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
 // contact page 
 
 .sub_heading {

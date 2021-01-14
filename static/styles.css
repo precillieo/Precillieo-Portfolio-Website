@@ -271,7 +271,7 @@ body {
 .my-work .portfolio_container .portfolio_items .portfolio_detail .languages {
   margin: 1rem 0;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #586069;
+  color: black;
   font-size: 0.8rem;
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links {
@@ -294,6 +294,34 @@ body {
 }
 .my-work .portfolio_container .portfolio_items .portfolio_detail .links .github a:hover {
   color: #1074E7;
+}
+
+.about-me .skill_tags {
+  display: flex;
+  margin: 0.6rem 0;
+}
+.about-me .skill_tags .tags {
+  margin-right: 1rem;
+  background-color: #f1f8ff;
+  padding: 0.25rem 0.8rem;
+  border-radius: 2rem;
+  color: #1074E7;
+  font-size: 0.9rem;
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.profile_container {
+  margin: 2rem 0;
+}
+.profile_container .details_left {
+  margin-right: 4rem;
+}
+.profile_container .details_left .avatar_container img {
+  width: 150px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 100%;
 }
 
 .sub_heading {
