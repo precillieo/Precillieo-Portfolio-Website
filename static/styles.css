@@ -317,11 +317,14 @@ body {
   margin-right: 4rem;
 }
 .profile_container .details_left .avatar_container img {
-  width: 150px;
-  height: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.profile_container .details_left .profile_basic_data .p_data .p_data_content {
+  font-size: 0.8rem;
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .sub_heading {

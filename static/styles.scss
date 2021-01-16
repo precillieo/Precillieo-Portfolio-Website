@@ -328,10 +328,19 @@ body {
         margin-right: 4rem;
         .avatar_container {
             img {
-                width: 150px;
-                height: 200px;
-                object-fit: contain;
-                border-radius: 100%;
+                width: 250px;
+                height: 250px;
+                object-fit: fill;
+            }
+        }
+        .profile_basic_data {
+            .p_data {
+                .p_data_content {
+                    font: {
+                        size: 0.8rem;
+                        family: $para-font
+                    }
+                }
             }
         }
     }
