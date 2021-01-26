@@ -33,11 +33,14 @@
 	<header class="site-header" role="banner">
 		<nav class="nav_bar_lg d-flex justify-space-between" role="navigation">
 			<div class="desktop_nav_menu">
-				<a href="{{ url_for('home') }}"> Home</a>
-				<a href="{{ url_for('portfolio') }}">Portfolio</a>
-				<a target="_blank" href="https://medium.com/@precillieo">Blog</a>
-				<a href="{{ url_for('about') }}"> About</a>
-				<a href="{{ url_for('contact') }}">Contact Me</a>
+				<a href="{{ url_for('home') }}" class="nav_li active" id="nav_link" onclick="showActiveTab(e)"> Home</a>
+				<a href="{{ url_for('portfolio') }}" class="nav_li" id="nav_link"
+					onclick="showActiveTab(e)">Portfolio</a>
+				<a target="_blank" href="https://medium.com/@precillieo" class="nav_li" id="nav_link"
+					onclick="showActiveTab(e)">Blog</a>
+				<a href="{{ url_for('about') }}" class="nav_li" id="nav_link" onclick="showActiveTab(e)"> About</a>
+				<a href="{{ url_for('contact') }}" class="nav_li" id="nav_link" onclick="showActiveTab(e)">Contact
+					Me</a>
 			</div>
 			<div class="m-nav-toggle-container">
 				<button class="navbar-toggler" type="button" role="button" aria-controls="navbarToggle"
@@ -71,12 +74,7 @@
 	{% block content %}
 	{% endblock %}
 
-	<footer class="p-footer d-flex justify-content-center">
-		<div class="footer_credit">
-			<!-- <p>Copyright &copy; <span class="currentYear"></span> | Web app built by 18 years old
-				Data Scientist</p> -->
-		</div>
-	</footer>
+
 	<script src="static/main.js"></script>
 </body>
 

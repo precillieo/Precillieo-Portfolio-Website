@@ -56,6 +56,22 @@ body {
      object-fit: cover !important;
 }
 
+.c-green {
+  background-color: lime;
+}
+
+.c-blue {
+  background-color: #1074E7;
+}
+
+.c-yellow {
+  background-color: #ff2;
+}
+
+.c-orange {
+  background-color: orange;
+}
+
 .hero_img_container {
   width: auto;
   height: auto;
@@ -133,6 +149,7 @@ body {
   border-bottom: 2px solid #1074E7;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  color: yellow;
 }
 .site-header .nav_bar_lg .m-nav-toggle-container .navbar-toggler {
   background-color: white;
@@ -297,15 +314,10 @@ body {
 }
 
 .about-me .skill_tags {
-  display: flex;
   margin: 0.6rem 0;
+  background-color: #f1f4f8;
 }
 .about-me .skill_tags .tags {
-  margin-right: 1rem;
-  background-color: #f1f8ff;
-  padding: 0.25rem 0.8rem;
-  border-radius: 2rem;
-  color: #1074E7;
   font-size: 0.9rem;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -316,15 +328,180 @@ body {
 .profile_container .details_left {
   margin-right: 4rem;
 }
+.profile_container .details_left .avatar_container {
+  margin-bottom: 2rem;
+}
 .profile_container .details_left .avatar_container img {
   width: 250px;
   height: 250px;
   -o-object-fit: fill;
      object-fit: fill;
 }
+.profile_container .details_left .profile_basic_data .p_data .p-sub_head {
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0.6rem 0;
+}
 .profile_container .details_left .profile_basic_data .p_data .p_data_content {
+  margin-top: 0.5rem;
   font-size: 0.8rem;
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.profile_container .details_left .profile_basic_data .p_data .p_data_content .icons_svg {
+  margin-right: 0.3rem;
+}
+.profile_container .details_left .profile_basic_data .p_data p {
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+}
+.profile_container .details_right .about-readme {
+  margin-bottom: 1rem;
+}
+.profile_container .details_right .about-readme .readme_text {
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  font-line-height: 1.5;
+  font-margin-top: 0.5rem;
+  font-margin-bottom: 0.5rem;
+}
+.profile_container .details_right .skill_box {
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.profile_container .details_right .skill_box .skill_heading {
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+.profile_container .details_right .skill_box .skill_list {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.profile_container .details_right .skill_box .skill_list .skill_sub_heading {
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.profile_container .details_right .skill_box .skill_list .skill_sub_heading_1 {
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.profile_container .details_right .skill_box .skill_list .skill_data {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.profile_container .details_right .skill_box .skill_list .skill_data .skill_lang {
+  display: flex;
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+}
+.profile_container .details_right .skill_box .skill_list .skill_data .skill_lang .skill_color {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  margin: 0 0.3rem 0 0;
+}
+.profile_container .details_right .skill_box .skill_list .skill_data .skill_progress_box {
+  margin: 0.1rem 0;
+  height: 0.9rem;
+  border-radius: 1rem;
+  background-color: #f1f4f8;
+}
+.profile_container .details_right .skill_box .skill_list .skill_data .skill_progress_box .skill_progress_count {
+  background-color: #809cf0;
+  height: 0.9rem;
+  border-radius: inherit;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.profile_container .details_right .timeline_heading {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.profile_container .details_right .timeline_heading h3 {
+  text-align: center;
+  font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.profile_container .details_right .timeline_box {
+  padding: 1rem 1.5rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.profile_container .details_right .timeline_box .timeline-badge {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  position: absolute;
+  left: 0;
+}
+.profile_container .details_right .timeline_box .timeline-badge::after {
+  content: " ";
+  width: 0.1rem;
+  height: 7rem;
+  background-color: gainsboro;
+  position: absolute;
+  top: 1.2rem;
+  left: 0.5rem;
+}
+.profile_container .details_right .timeline_box .timeline-badge::before {
+  content: " ";
+  width: 0.1rem;
+  height: 1rem;
+  background-color: gainsboro;
+  position: absolute;
+  top: -1.2rem;
+  left: 0.5rem;
+}
+.profile_container .details_right .timeline_box .timelinebody {
+  border: 1px solid gainsboro;
+  position: relative;
+  margin: 1rem 0;
+  width: 100%;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_sub_heading p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_date p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_data a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_data a:hover {
+  color: #1074E7;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_data a:active {
+  color: red;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_data p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+.profile_container .details_right .timeline_box .timelinebody .timeline_data p::before {
+  content: " - ";
+}
+.profile_container .details_right .timeline_box .timelinebody::before {
+  content: " ";
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-right: 0.5rem solid gainsboro;
+  position: absolute;
+  left: -0.5rem;
 }
 
 .sub_heading {
@@ -351,12 +528,20 @@ body {
   font-size: 0.9rem;
   margin-right: 1rem;
 }
+.contact .contact_link img {
+  width: 1rem;
+  height: 1rem;
+}
 .contact .contact_link:hover {
   color: #1074E7;
 }
 
 .p-footer {
   margin: 1rem 0;
+}
+.p-footer .footer_credit {
+  position: absolute;
+  bottom: 0;
 }
 .p-footer .footer_credit p {
   font-family: Eina, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -375,5 +560,4 @@ body {
   .site-header .mobile_nav_menu {
     display: block;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

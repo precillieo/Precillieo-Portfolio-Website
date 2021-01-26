@@ -60,6 +60,18 @@ body {
     height: 6rem !important;
     object-fit: cover !important;
 }
+.c-green {
+    background-color: lime;
+}
+.c-blue {
+    background-color: #1074E7;
+}
+.c-yellow {
+    background-color: #ff2;
+}
+.c-orange {
+    background-color: orange;
+}
 .hero_img_container {
     width: auto;
     height: auto;
@@ -128,6 +140,7 @@ body {
                 border-bottom: 2px solid #1074E7;
                 border-top-left-radius: 6px;
                 border-top-right-radius: 6px;
+                color: yellow;
             }
         }
         .m-nav-toggle-container {
@@ -308,14 +321,9 @@ body {
 // About page
 .about-me {
     .skill_tags {
-        display: flex;
         margin: 0.6rem 0;
+        background-color: #f1f4f8;
         .tags {
-            margin-right: 1rem;
-            background-color: #f1f8ff;
-            padding: 0.25rem 0.8rem;
-            border-radius: 2rem;
-            color: #1074E7;
             font-size: 0.9rem;
             font-family: $para-font;
         }
@@ -325,22 +333,230 @@ body {
 .profile_container {
     margin: 2rem 0;
     .details_left {
-        margin-right: 4rem;
+        margin: {
+            right: 4rem;
+        }
         .avatar_container {
             img {
                 width: 250px;
                 height: 250px;
                 object-fit: fill;
             }
+            margin: {
+                bottom: 2rem;
+            }
         }
         .profile_basic_data {
             .p_data {
+                .p-sub_head {
+                    font-family: $bold-font;
+                    margin: 0.6rem 0;
+                }
                 .p_data_content {
+                    margin : {
+                        top: 0.5rem;
+                    }
+                    .icons_svg {
+                        margin: {
+                            right: 0.3rem;
+                        }
+                    }
                     font: {
                         size: 0.8rem;
                         family: $para-font
                     }
                 }
+                p {
+                    font-family: $para-font;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .details_right {
+        .about-readme {
+            margin: {
+                // top: 0.8rem;
+                bottom: 1rem;
+            }
+            .readme_text {
+                font: {
+                    family: $para-font;
+                    size: 0.9rem;
+                    line-height: 1.5;
+                    margin: {
+                        top: 0.5rem;
+                        bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+        .skill_box {
+            margin: {
+                top: 0.8rem;
+                bottom: 0.5rem;
+                }
+            .skill_heading {
+                margin: {
+                    top: 0.5rem;
+                    bottom: 0.3rem;
+                }
+                font-family: $bold-font;
+                text-align: center;
+            }
+            .skill_list {
+                margin: {
+                        top: 0.6rem;
+                        bottom: 0.6rem;
+                    }
+                .skill_sub_heading {
+                    margin: {
+                        top: 0.6rem;
+                        bottom: 0.8rem;
+                    }
+                    font-family: $bold-font;
+                }
+                .skill_sub_heading_1 {
+                    font-family: $bold-font;
+                }
+                .skill_data {
+                    margin: {
+                        top: 0.6rem;
+                        bottom: 0.6rem;
+                    }
+                    .skill_lang {
+                        display: flex;
+                        margin: 0.2rem 0;
+                        font-size: 0.9rem;
+                        font-family: $para-font;
+                        align-items: center;
+                        .skill_color {
+                            width: 0.5rem;
+                            height: 0.5rem;
+                            border-radius: 100%;
+                            margin: 0 0.3rem 0 0;
+                        }
+                    }
+                    .skill_progress_box {
+                        margin: 0.1rem 0;
+                        height: 0.9rem;
+                        border-radius: 1rem;
+                        background-color: #f1f4f8;
+                            .skill_progress_count {
+                                background-color: #809cf0;
+                                height: 0.9rem;
+                                border-radius: inherit;
+                                text-align: center;
+                                font-size: 0.8rem;
+                                font-weight: 600;
+                            }
+                        }
+                }
+            }
+        }
+        .timeline_heading {
+            margin : {
+                top: 2rem;
+                bottom: 0.5rem;
+            }
+            h3 {
+                text-align: center;
+                font-family: $bold-font;
+            }
+        }
+        .timeline_box {
+            // border: 1px solid green;
+            padding: 1rem 1.5rem;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            .timeline-badge {
+                margin: {
+                    right: 1rem;
+                    top: 1rem;
+                    left:0.5rem;
+                }
+                position: absolute;
+                left: 0;
+            }
+            .timeline-badge::after {
+                content: " ";
+                width: 0.1rem;
+                height: 7rem;
+                // border: 1px solid red;
+                background-color: gainsboro;
+                position: absolute;
+                top:1.2rem;
+                left: 0.5rem;
+            }
+            .timeline-badge::before {
+                content: " ";
+                width: 0.1rem;
+                height: 1rem;
+                background-color: gainsboro;
+                position: absolute;
+                top: -1.2rem;
+                left: 0.5rem;
+            }
+            .timelinebody {
+                border: 1px solid gainsboro;
+                position: relative;
+                margin: 1rem 0;
+                width: 100%;
+                margin: {
+                    left: 1rem;
+                }
+                padding: 1rem;
+                .timeline_sub_heading{ 
+                    p {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: 600;
+                        margin: 0 0 0.3rem 0;
+                    }
+                }
+                .timeline_date {
+                    p {
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                        margin: {
+                            bottom: 0.25rem;
+                        }
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    }
+                }
+                .timeline_data {
+                    a {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        color: black;
+                        text-decoration: underline;
+                        font-size: 0.9rem;
+                        margin: 0.3rem 0;
+                    }
+                    a:hover {
+                        color: #1074E7;
+                    }
+                    a:active {
+                        color: red;
+                    }
+                    p {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        margin: {
+                            left: 0.5rem;
+                        }
+                        font-size: 0.8rem;
+                    }
+                    p::before {
+                        content: " - ";
+                    }
+                }
+            }
+            .timelinebody::before {
+                content: " ";
+                border-top : 0.5rem solid transparent;
+                border-bottom: 0.5rem solid transparent;
+                border-right: 0.5rem solid gainsboro;
+                position: absolute;
+                left: -0.5rem;
             }
         }
     }
@@ -369,6 +585,10 @@ body {
         color: #586069;
         font-size: 0.9rem;
         margin-right: 1rem;
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
     }
     .contact_link:hover {
         color: #1074E7;
@@ -383,6 +603,8 @@ body {
             font-family: $para-font;
             font-size: 0.9rem;
         }
+        position: absolute;
+        bottom: 0;
     }
 }
 // desktop layout
