@@ -31,7 +31,7 @@ body {
     min-height: 100vh;
     font-family: inherit;
     // font-family: Eina, -apple-system, Arial , Helvetica, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0 10%;
+    padding: 0 10% 5% 10%;
     scroll-behavior: auto;
     line-height: 1.5;
 }
@@ -44,10 +44,10 @@ body {
     text-align: center !important;
 }
 .justify-flex-start {
-    justify-content: flex-start !important;
+    justify-content: flex-start;
 }
 .justify-space-between {
-    justify-content: space-between !important;
+    justify-content: space-between;
 }
 .justify-space-evenly {
     justify-content: space-evenly !important;
@@ -86,7 +86,7 @@ body {
         top: -30px;
         left: 10px;
         object-fit: fill;
-        z-index: 300;
+        z-index: 2;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         border-bottom-left-radius: 2rem;
@@ -102,7 +102,7 @@ body {
     }
 }
 .flex-wrap {
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
 }
 .flex-direction-column {
     flex-direction: column !important;
@@ -127,56 +127,35 @@ body {
     .nav_bar_lg {
         width: inherit;
         .desktop_nav_menu {
-            a {
+            .nav_li {
                 font-family: $para-font;
                 text-decoration: none;
                 font-weight: 600;
                 color: #555;
                 margin-right: 1.5rem;
                 font-size: 0.9rem;
-                padding: 0.25rem 0.5rem;
+                padding: 0.25rem 0;
             }
-            a .active {
-                border-bottom: 2px solid #1074E7;
-                border-top-left-radius: 6px;
-                border-top-right-radius: 6px;
-                color: yellow;
+            .nav_li:hover {
+                border-bottom: 3.5px solid #1074E7;
             }
         }
-        .m-nav-toggle-container {
+         .m-nav-toggle-container {
             .navbar-toggler {
-                background-color: white;
-                outline: none;
-                border:none;
+                display: none;
+            }
+        }
+        .m-nav-toggler-close {
+            .navbar-toggler-close {
                 display: none;
             }
         }
     }
 }
 
-
+// large screen style for mobile nav
 .mobile_nav_menu {
-    // background-color: dodgerblue;
     display: none;
-    width: 100%;
-    padding: 2.5rem 2rem;
-    border-radius: 1.5rem;
-    z-index: 30;
-    .nav_items {
-        background-color: dodgerblue;
-        .nav_link {
-            text-decoration: none;
-            font-family: $para-font;
-            font-size: 1.3rem;
-            color: #fff;
-            font-weight: 600;
-            margin-bottom:2.5rem;
-            padding: 0 0 0 1.5rem;
-        }
-        .nav_link:last-child {
-            margin-bottom: 0;
-        }
-    }
 }
 .port-intro {
     margin: 1rem 0;
@@ -202,16 +181,17 @@ body {
     .hero_text_summary {
         margin: 0 0 2rem 0;
         .intro_text {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-family: $para-font;
             line-height: inherit;
             color:#586069;
+            z-index: 4;
         }
     }
     .cta_btn_container {
         display: block;
         outline: none;
-        top: 17rem;
+        width: 150px;
         .cta_link {
             text-decoration: none;
             .cta_button {
@@ -294,7 +274,7 @@ body {
                 .links {
                    margin: 0.5rem 0;
                     .blog_link {
-                        margin: 0 0.5rem 0 0;
+                        margin: 0 1rem 0 0;
                         a {
                             text-decoration: none;
                             font-family: $para-font;
@@ -375,6 +355,7 @@ body {
     }
     .details_right {
         .about-readme {
+            width: 100%;
             margin: {
                 // top: 0.8rem;
                 bottom: 1rem;
@@ -384,14 +365,15 @@ body {
                     family: $para-font;
                     size: 0.9rem;
                     line-height: 1.5;
-                    margin: {
+                }
+                margin: {
                         top: 0.5rem;
                         bottom: 0.5rem;
                     }
-                }
             }
         }
         .skill_box {
+            width: 100%;
             margin: {
                 top: 0.8rem;
                 bottom: 0.5rem;
@@ -604,21 +586,162 @@ body {
             font-size: 0.9rem;
         }
         position: absolute;
+        margin: {
+            right: 10%;
+            left: 10%;
+        }
+        text-align: center;
         bottom: 0;
     }
 }
-// desktop layout
+// mobile layout
 
 @media screen and (max-width: 750px) {
-    .site-header {
+    body {
         width: 100%;
-        display: none;
-        border: 1px solid yellow;
+    }
+    .site-header {
         .nav_bar_lg {
-            width: inherit;
+            .desktop_nav_menu {
+                display: none;
+            }
+            .m-nav-toggle-container {
+                .navbar-toggler {
+                    display: block;
+                    padding: 0.5rem;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+            .m-nav-toggler-close {
+                .navbar-toggler-close {
+                    display: none;
+                    font-size: 2rem;
+                    padding: 0.5rem;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
     }
+
     .mobile_nav_menu {
-        display: block;
+        padding : 1rem 0;
+        display: none;
+        width: 80%;
+        background-color: #555;
+        position: fixed;
+        top: 6rem;
+        height: auto;
+        z-index: 6;
+        overflow-x: hidden;
+        margin: auto 0;
+        .nav_items {
+            display: block;
+            .m_nav_link {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                font: {
+                    family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+                    size: 1rem;
+                    weight: 600;
+                }
+                margin: 0.6rem 0;
+                padding: 0.3rem 1rem;
+            }
+        }
+    }
+    .portfolio-intro {
+        .portfolio_intro_text {
+            font-size: 1rem;
+        }
+    }
+    .my-work {
+        .portfolio_container {
+            width: 100%;
+            .portfolio_items {
+                width: 100%;
+                margin: 0.5rem 0;
+                flex-direction: column;
+                .portfolio_thumbnail{
+                    width: 100% !important;
+                    height: auto !important;
+                    margin: 0;
+                }
+                .portfolio_detail {
+                    .title {
+                        font-size: 1.2rem;
+                    }
+                    .description {
+                        font-size: 1rem;
+                    }
+                    .languages {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .meta_img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+    .my-contact-subtitle {
+        font-size: 1rem;
+    }
+
+    // about
+
+    .profile_container {
+        width: 100%;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        .details_left {
+            margin: {
+                right: 0rem;
+                bottom: 3rem;
+            }
+            .avatar_container {
+                width: 100%;
+                height: 250px;
+            }
+        }
+        .details_right {
+            .about-readme {
+                margin: {
+                    bottom: 1rem;
+                }
+                .readme_text {
+                    margin: {
+                        bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .p-home-container {
+        margin : 0 0 3rem 0;
+        .hero_text {
+            margin: 4rem 0 3rem 0;
+        }
+        .hero_text_summary{
+            .intro_text {
+                font-size: 0.95rem;
+            }
+        }
+        .cta_btn_container {
+            width: 50%;
+            justify-content: center !important;
+        }
+        .hero_img_container {
+            z-index: -1;
+        }
     }
 }
-}
+

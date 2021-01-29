@@ -8,26 +8,24 @@
 // currentYear.innerHTML = Year;
 
 // code to toggle dropdown for mobile nav
+const navToggler = document.querySelector(".navbar-toggler");
+const mobileNav = document.querySelector(".mobile_nav_menu");
+const navTogglerClose = document.querySelector(".navbar-toggler-close");
 
+function openMobileNav() {
+    mobileNav.style.display = "block";
+    navToggler.style.display = "none";
+    navTogglerClose.style.display = "block";
+}
 
+function closeMobileNav() {
+    mobileNav.style.display = "none";
+    navToggler.style.display = "block";
+    navTogglerClose.style.display = "none";
+}
 
-
-// code to display active tabs
-
-// function showActiveTab(e) {
-//     // get all tabs and remove active class
-//     let tabContents;
-
-//     // remove the active class from tab contents
-//     tabContents = document.getElementsByClassName("nav_li");
-//     for (i = 0; i < tabContents; i++) {
-//         tabContents[i].className = tabContents[i].className.replace(" active", "")
-//     }
-
-//     e.currentTarget.className += " active";
-
-// }
-
+navToggler.addEventListener("click", openMobileNav);
+navTogglerClose.addEventListener("click", closeMobileNav);
 
 // code to display skill level percentage automatically based on the number inputed
 
