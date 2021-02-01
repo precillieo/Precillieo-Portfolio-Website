@@ -72,12 +72,18 @@ body {
 .c-orange {
     background-color: orange;
 }
+.mr-1 {
+    margin-right: 0.5rem;
+}
+// .mrc-1 {
+//     margin-left : 0.4rem;
+// }
 .hero_img_container {
     width: auto;
     height: auto;
     background-color: rgba(153, 160, 151, 0.5);
     top: 8rem;
-    left: 60%;
+    left: 70%;
     padding: 1rem 0.5rem 0 0.5rem;
     border-radius: 100%;
     .hero_img {
@@ -585,13 +591,12 @@ body {
             font-family: $para-font;
             font-size: 0.9rem;
         }
-        position: absolute;
         margin: {
             right: 10%;
             left: 10%;
         }
         text-align: center;
-        bottom: 0;
+        height:auto;
     }
 }
 // mobile layout
@@ -729,18 +734,29 @@ body {
         margin : 0 0 3rem 0;
         .hero_text {
             margin: 4rem 0 3rem 0;
+            font-size: 2rem;
         }
         .hero_text_summary{
             .intro_text {
                 font-size: 0.95rem;
             }
         }
+        .m-image {
+            display: block;
+            margin: 1rem 0;
+            width: 100%;
+            .m_hero_img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
         .cta_btn_container {
-            width: 50%;
+            width: 70%;
             justify-content: center !important;
         }
         .hero_img_container {
-            z-index: -1;
+            display: none;
         }
     }
 }
