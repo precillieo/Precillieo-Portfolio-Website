@@ -493,6 +493,7 @@ body {
   font-family: Eina-bold, -apple-system, Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
   margin: 2rem 0;
+  text-align: center;
 }
 
 .my-contact-subtitle {
@@ -650,7 +651,7 @@ body {
   }
   .p-home-container .hero_text {
     margin: 4rem 0 3rem 0;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .p-home-container .hero_text_summary .intro_text {
     font-size: 0.95rem;
@@ -674,3 +675,7 @@ body {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
+
+.skilled {
+  display: flex;
+}
