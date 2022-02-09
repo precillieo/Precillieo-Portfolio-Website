@@ -1,0 +1,72 @@
+:root {
+    --container-bg-color: #333;
+    --left-bg-color: rgba(223, 39, 39, 0.7);
+    --left-button-hover-color: rgba(161, 11, 11, 0.3);
+    --right-bg-color: rgb(255, 255, 255);
+    --right-button-hover-color: rgba(92, 92, 92, 0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+html, body {
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+p{
+    size:16px;
+    height: 24px;
+    color: rgb(33, 37, 41)
+}
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 245, 245, 0);
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left:0;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background:#ffff;
+}
+
+
+.split.right {
+    right:0;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: #3333;
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
