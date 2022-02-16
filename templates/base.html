@@ -26,78 +26,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/97bbef3340.js" crossorigin="anonymous"></script>
     <title>Precillieo's Portfolio</title>
-<style>
-    body {
-        font-family: Arial;
-        color: rgb(0, 0, 0);
-    }
-    h1{
-        padding:20px;
-        size: 70px;
-        font-weight: 900;
-    }
-    p{
-        padding: 20px;
-        size: 16px;
-        font-weight: 300;
-    }
-    .left,.right {
-        height: 100%;
-        width: 50%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        overflow-x: hidden;
-    }
-    .left {
-        left: 0;
-    }
-    .right {
-        right: 0;
-    }
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .centered img {
-        width: 150px;
-        border-radius: 50%;
-    }
-    .socials{
-        bottom: 20px;
-    }
-</style>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        h1{
+            padding:20px;
+            font-weight: 900;
+
+        }
+        p{
+            padding: 20px;
+            size: 16px;
+            font-weight: 300;
+        }
+        .left,.right {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            right: 0;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .container{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .centered img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .fa-brands{
+            padding-right:5px;
+        }
+    </style>
 </head>
 <body>
     <div class="left">
         <img class="left" src="static/hero.jpg" alt="picture of me">
     </div>
     <div class="right">
-        <br>
-        <br>
-        <br>
-        <h1>PRECILLIEO</h1>
-        <br>
-        <br>
-        <p>Hi, I am Precious Kolawole.</p> 
-        <p>I am an adept Data Scientist,proficient in Machine Learning, Deep Learning, 
-            and Software Engineering for Data Science with a track record
-            of products and solutions in the industry and community.
-        </p>
-        <div class="socials">
-            <ul>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                <i class="fa fa-github" aria-hidden="true"></i>
-                <i class="fa fa-medium" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </ul>
+        <div class="container">
+            <h1>PRECILLIEO</h1>
+            <p>Hi, I am Precious Kolawole.</p> 
+            <p>I am an adept Data Scientist,proficient in Machine Learning, Deep Learning
+                and Software Engineering for Data Science with a track record
+                of products and solutions in the industry and community.
+            </p>
+            <div class="socials">
+                <ul>
+                    <i class="fa-brands fa-linkedin-in fa-xl"></i>
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                    <i class="fa-brands fa-medium fa-xl"></i>
+                    <i class="fa-brands fa-github fa-xl"></i>
+                    <i class="fa-brands fa-hashnode fa-xl"></i>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="static/mains.js"></script>

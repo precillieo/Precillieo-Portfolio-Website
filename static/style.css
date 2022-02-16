@@ -1,9 +1,16 @@
 body {
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     color: rgb(0, 0, 0);
 }
 h1{
     padding:20px;
+    size: 70px;
+    font-weight: 900;
+}
+p{
+    padding: 20px;
+    size: 16px;
+    font-weight: 300;
 }
 .left,.right {
     height: 100%;
@@ -12,7 +19,6 @@ h1{
     z-index: 1;
     top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 .left {
     left: 0;
@@ -30,4 +36,7 @@ h1{
 .centered img {
     width: 150px;
     border-radius: 50%;
+}
+.socials{
+    bottom: 20px;
 }
