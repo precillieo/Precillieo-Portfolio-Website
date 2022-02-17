@@ -27,62 +27,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/97bbef3340.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
     <title>Precillieo's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: rgb(0, 0, 0);
-        }
-        h1{
-            font-weight: 900;
-            font-size: 70px;
-            padding-left: 10px;
-        }
-        p{
-            size: 16px;
-            font-weight: 300;
-            padding-left: 10px;
-        }
-        .left,.right {
-            height: 100%;
-            width: 50%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            overflow-x: hidden;
-        }
-        .left {
-            left: 0;
-        }
-        .right {
-            right: 0;
-        }
-        .container{
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            -ms-transform: translateY(-40%);
-            transform: translateY(-40%);
-        }
-        .centered img {
-            width: 150px;
-            border-radius: 50%;
-        }
-        .socials{
-            padding-left: 10px;
-            padding-top: 10px;
-        }
-        .fa-brands{
-            padding-right:5px;
-            color: rgb(0, 0, 0);
-        }
-    </style>
 </head>
 <body>
     <div class="left">
         <img class="left" src="static/hero.jpg" alt="picture of me">
     </div>
     <div class="right">
+        <!--Navigation-->
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Blogs</a>
+                <a href="#">Community</a>
+                <a href="#">Talks</a>
+                <a href="#">Work Experiences</a>
+                <a href="#">Awards, Achievements, and Certifications</a>
+            </div>
+        </div>
+        <div class="menu">
+            <i style="cursor:pointer"class="fa-solid fa-bars fa-2xl"onclick="openNav()"></i>
+        </div>
         <div class="container">
             <h1>PRECILLIEO</h1>
             <p>Hi, I am Precious Kolawole.</p> 
@@ -101,6 +69,14 @@
             </div>
         </div>
     </div>
-    <script src="static/mains.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 </body>
 </html>

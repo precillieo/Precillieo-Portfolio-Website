@@ -3,14 +3,14 @@ body {
     color: rgb(0, 0, 0);
 }
 h1{
-    padding:20px;
-    size: 70px;
     font-weight: 900;
+    font-size: 70px;
+    padding-left: 10px;
 }
 p{
-    padding: 20px;
     size: 16px;
     font-weight: 300;
+    padding-left: 10px;
 }
 .left,.right {
     height: 100%;
@@ -26,17 +26,74 @@ p{
 .right {
     right: 0;
 }
-.centered {
+.menu{
+    text-align:right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.container{
+    margin: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
 }
 .centered img {
     width: 150px;
     border-radius: 50%;
 }
 .socials{
-    bottom: 20px;
+    padding-left: 10px;
+    padding-top: 50px;
+}
+.fa-brands{
+    padding-right:5px;
+    color: rgb(0, 0, 0);
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #b8b3b3;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
 }
