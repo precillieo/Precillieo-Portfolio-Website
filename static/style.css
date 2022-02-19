@@ -49,14 +49,16 @@ p{
 .fa-brands{
     padding-right:5px;
     color: rgb(0, 0, 0);
+    
 }
+
 .overlay {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     transition: 0.5s;
@@ -67,7 +69,8 @@ p{
     top: 30%;
     width: 100%;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 2px;
+    font-size: 12px;
 }
 
 .overlay a {
@@ -80,7 +83,7 @@ p{
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #b8b3b3;
+    color: rgb(255,0,97);
 }
 
 .overlay .closebtn {
@@ -95,5 +98,8 @@ p{
     font-size: 40px;
     top: 15px;
     right: 35px;
+    }
+    .container{
+
     }
 }

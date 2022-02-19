@@ -1,82 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precious Kolawole</title>
-
-    <!-- facebook opengraph -->
-    <meta property="og:title" content="Precious Kolawole">
-    <meta property="og:description" content="I'm a Data Scientist and a Machine Learning Engineer">
-    <meta property="og:site_name" content="Precious Kolawole">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://precillieo.herokuapp.com/home">
-    <meta property="og:image" content="">
-
-    <!-- twitter cards -->
-    <meta name="twitter:site" content="@precillieo">
-    <meta name="twitter:title" content="Precious Kolawole">
-    <meta name="twitter:creator" content="@precillieo">
-    <meta name="twitter:description" content="I'm a Data Scientist and a Machine Learning Engineer">
-    <meta name="twitter:img" content="/static/hero.jpg">
-    <meta name="twitter:card" content="summary">
-
-    <!--Styling-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/97bbef3340.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-    <title>Precillieo's Portfolio</title>
-</head>
-<body>
-    <div class="left">
-        <img class="left" src="static/hero.jpg" alt="picture of me">
-    </div>
-    <div class="right">
-        <!--Navigation-->
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
-            <div class="overlay-content">
-                <a href="#">About</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Blogs</a>
-                <a href="#">Community</a>
-                <a href="#">Talks</a>
-                <a href="#">Work Experiences</a>
-                <a href="#">Awards, Achievements, and Certifications</a>
-            </div>
-        </div>
-        <div class="menu">
-            <i style="cursor:pointer"class="fa-solid fa-bars fa-2xl"onclick="openNav()"></i>
-        </div>
-        <div class="container">
-            <h1>PRECILLIEO</h1>
-            <p>Hi, I am Precious Kolawole.</p> 
-            <p>I am an adept Data Scientist,proficient in Machine Learning, Deep Learning
-                and Software Engineering for Data Science with a track record
-                of products and solutions in the industry and community.
-            </p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/kolawole-precious-8723b2198/"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
-                <a href="https://twitter.com/precillieo"><i class="fa-brands fa-twitter fa-xl"></i></a>
-                <a href="https://precillieo.medium.com/"><i class="fa-brands fa-medium fa-xl"></i></a>
-                <a href="https://github.com/Precillieo"><i class="fa-brands fa-github fa-xl"></i></a>
-                <a href="https://precillieo.hashnode.dev/"><i class="fa-brands fa-hashnode fa-xl"></i></a>
-                <a href="https://www.instagram.com/precillieo/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-                <a href="https://www.youtube.com/channel/UCRuQ2z4TapeyNBPx0WT8ZbA"><i class="fa-brands fa-youtube fa-xl"></i></a>
-            </div>
+{% extends "nav.html" %}
+{% block content %}
+<div class="left">
+    <img class="left" src="static/hero.jpg" alt="picture of me">
+</div>
+<div class="right">
+    <div class="container">
+        <h1>PRECILLIEO</h1>
+        <p>Hi, I am Precious Kolawole.</p> 
+        <p>I am an adept Data Scientist,proficient in Machine Learning, Deep Learning
+            and Software Engineering for Data Science with a track record
+            of products and solutions in the industry and community.
+        </p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/kolawole-precious-8723b2198/"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a href="https://twitter.com/precillieo"><i class="fa-brands fa-twitter fa-xl"></i></a>
+            <a href="https://precillieo.medium.com/"><i class="fa-brands fa-medium fa-xl"></i></a>
+            <a href="https://github.com/Precillieo"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="https://precillieo.hashnode.dev/"><i class="fa-brands fa-hashnode fa-xl"></i></a>
+            <a href="https://www.instagram.com/precillieo/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.youtube.com/channel/UCRuQ2z4TapeyNBPx0WT8ZbA"><i class="fa-brands fa-youtube fa-xl"></i></a>
         </div>
     </div>
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
-        
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
-</body>
-</html>
+</div>
+{% endblock %}
