@@ -31,10 +31,10 @@
     <title>Precillieo's Portfolio</title>
 </head>
 <body>
-    <div id="myNav" class="overlay">
+    <div id="Nav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
         <div class="overlay-content">
-            <a href="#">About</a>
+            <a href="{{ url_for('about')}}">About</a>
             <a href="#">Portfolio</a>
             <a href="#">Blogs</a>
             <a href="#">Community</a>
@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="menu">
-        <i style="cursor:pointer"class="fa-solid fa-bars fa-2xl"onclick="openNav()"></i>
+        <i class="fa-solid fa-bars fa-2xl" onclick="openNav()"></i>
     </div>
     {% block content %}
     {% endblock %}
