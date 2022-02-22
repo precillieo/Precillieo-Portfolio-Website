@@ -19,6 +19,9 @@ li{
     float:left;
     list-style: none;
 }
+a{
+    text-decoration: none;
+}
 .left,.right {
     height: 100%;
     width: 50%;
@@ -118,6 +121,20 @@ li{
 }
 .about{
     display: flex;
+}
+.blog{
+    display:flex;
+    border-radius: 10px;
+}
+.blogs:hover{
+    color:rgb(255,0,97);
+}
+.blog a{
+    color:black;
+    text-decoration: none;
+}
+.blogs{
+    flex: 50%;
 }
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
