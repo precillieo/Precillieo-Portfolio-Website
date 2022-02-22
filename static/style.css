@@ -7,8 +7,11 @@ h1{
     font-size: 70px;
     padding-left: 10px;
 }
+h2{
+    padding-left: 10px;
+}
 p{
-    size: 16px;
+    size: 12px;
     font-weight: 300;
     padding-left: 10px;
 }
@@ -97,7 +100,25 @@ li{
     right: 45px;
     font-size: 30px;
 }
-
+.about-left {
+    flex: 50%;
+}
+.about-right{
+    flex:50%;
+}
+.about-left img{
+    max-width:100%;
+    border: 5px dashed rgb(255,0,97);
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.about{
+    display: flex;
+}
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
