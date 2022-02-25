@@ -111,7 +111,8 @@ a{
 }
 .about-left img{
     max-width:100%;
-    border: 5px dashed rgb(255,0,97);
+    border: 2px dashed rgb(255,0,97);
+    align-content: center;
     -webkit-border-top-left-radius: 10px;
     -webkit-border-bottom-right-radius: 10px;
     -moz-border-radius-topleft: 10px;
@@ -125,17 +126,46 @@ a{
 .blog{
     display:flex;
     border-radius: 10px;
-}
-.blogs:hover{
-    color:rgb(255,0,97);
+    margin: 5px;
 }
 .blog a{
     color:black;
     text-decoration: none;
 }
-.blogs{
+.blogs {
+    border: 2px solid rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     flex: 50%;
+    border-radius: 10px;
+    color: ghostwhite;
+    overflow: hidden;
+    padding:10px;
 }
+
+.blogs:hover {
+color: deepskyblue;
+transition: color 0.25s ease;
+}
+
+.blogs:after {
+    content: "";
+    position: absolute;
+    bottom: 101%;
+    left: 101%;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    background: rgb(255,0,97);
+    z-index: -1;
+    transition: all 0.25s ease;
+}
+
+.blogs:hover::after {
+    color: deepskyblue;
+    bottom: 0;
+    left: 0;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
