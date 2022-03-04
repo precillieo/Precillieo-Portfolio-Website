@@ -6,171 +6,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
-        @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-        *{
-            box-sizing: border-box;
-        }
-
-        body, html {
-            font-family: 'Roboto Slab', serif;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-        }
-
-        body {
-            background-color: #D2DBDD;
-            display: flex;
-            display: -webkit-flex;
-            -webkit-justify-content: center;
-            -webkit-align-items: center;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cards {
-            width: 100%;
-            display: flex;
-            display: -webkit-flex;
-            justify-content: center;
-            -webkit-justify-content: center;
-            max-width: 820px;
-        }
-
-        .card--1 .card__img, .card--1 .card__img--hover {
-            background-image: url('/static/hero.jpg');
-        }
-
-        .card--2 .card__img, .card--2 .card__img--hover {
-            background-image: url('/static/work_experience.jpg');
-        }
-
-
-
-        .card__img {
-        visibility: hidden;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 235px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        
-        }
-
-        .card__info-hover {
-            position: absolute;
-            padding: 16px;
-        width: 100%;
-        opacity: 0;
-        top: 0;
-        }
-
-        .card__img--hover {
-        transition: 0.2s all ease-out;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-        position: absolute;
-            height: 235px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        top: 0;
-        
-        }
-        .card {
-        margin-right: 25px;
-        transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-        background-color: #fff;
-            width: 33.3%;
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    .overlay-content {
         position: relative;
-        border-radius: 12px;
+        padding-top: 10px;
+        top: 20%;
+        width: 100%;
+        text-align: left;
+        font-size: 8px;
+    }
+        .socials{
+        padding-left: 10px;
+        padding-top: 50px;
+    }
+    .fa-brands{
+        padding-right:5px;
+        color: rgb(0, 0, 0);
+        
+    }
+    .menu{
+        text-align:right;
+        padding-right: 20px;
+        padding-top: 20px;
+        cursor:pointer;
+    }
+    body {
+        color: #272727;
+        font-family: 'Quicksand', serif;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+        padding: 1rem;
+    }
+
+    .main{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .btn {
+        color: #ffffff;
+        padding: 0.8rem;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        font-weight: 400;
+        display: block;
+        top:-20px;
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+
+    }
+
+    .btn:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards_item {
+        display: flex;
+        padding: 1rem;
+    }
+
+    @media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+    }
+
+    @media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+    }
+
+    .card {
+        background-color: rgb(255, 98, 158);
+        border-radius: 0.25rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
-        box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-        }
-        .card:hover {
-            box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
-            transform: scale(1.10, 1.10);
-        }
+    }
 
-        .card__info {
-        z-index: 2;
-        background-color: #fff;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        padding: 16px 24px 24px 24px;
-        }
+    .card_content {
+        padding: 1rem;
+    }
 
-        .card__category {
-            font-family: 'Raleway', sans-serif;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 2px;
-            font-weight: 500;
-        color: #868686;
-        }
+    .card_title {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        margin: 0px;
+    }
 
-        .card__title {
-            margin-top: 5px;
-            margin-bottom: 10px;
-            font-family: 'Roboto Slab', serif;
-        }
+    .card_text {
+        color: #ffffff;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;    
+        font-weight: 400;
+    }
 
-        .card__by {
-            font-size: 12px;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 500;
-        }
-
-        .card__author {
-            font-weight: 600;
-            text-decoration: none;
-            color: #AD7D52;
-        }
-
-        .card:hover .card__img--hover {
-            height: 100%;
-            opacity: 0.3;
-        }
-
-        .card:hover .card__info {
-            background-color: transparent;
-            position: relative;
-        }
-
-        .card:hover .card__info-hover {
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
-    <section class="cards">
-        <article class="card card--1">
-            <div class="card__img"></div>
-                <a href="#" class="card_link">
-                    <div class="card__img--hover"></div>
-                </a>
-            <div class="card__info">
-                <span class="card__category"> Test</span>
-                <h3 class="card__title">Check out my Talks</h3>
-                <span class="card__by">by <a href="#" class="card__author" title="author">Precious</a></span>
+    <div id="Nav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+        <div class="overlay-content">
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{ url_for('about')}}">About</a>
+            <a href="{{ url_for('portfolio')}}">Portfolio</a>
+            <a href="{{ url_for('blog')}}">Blogs</a>
+            <a href="{{ url_for('community')}}">Community</a>
+            <a href="{{ url_for('talks')}}">Talks</a>
+            <a href="{{ url_for('work')}}">Work Experiences</a>
+            <a href="{{ url_for('awards')}}">Awards, Achievements, and Certifications</a>
+            <hr>
+            <li><a href="https://www.linkedin.com/in/kolawole-precious-8723b2198/"><i class="fa-brands fa-linkedin-in fa-l"></i></a></li>
+            <li><a href="https://twitter.com/precillieo"><i class="fa-brands fa-twitter fa-l"></i></a></li>
+            <li><a href="https://precillieo.medium.com/"><i class="fa-brands fa-medium fa-l"></i></a></li>
+            <li><a href="https://github.com/Precillieo"><i class="fa-brands fa-github fa-l"></i></a></li>
+            <li><a href="https://precillieo.hashnode.dev/"><i class="fa-brands fa-hashnode fa-l"></i></a></li>
+            <li><a href="https://www.instagram.com/precillieo/"><i class="fa-brands fa-instagram fa-l"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCRuQ2z4TapeyNBPx0WT8ZbA"><i class="fa-brands fa-youtube fa-l"></i></a></li>
+        </div>
+
+    <div class="menu">
+        <i class="fa-solid fa-bars fa-2xl" onclick="openNav()"></i>
+    </div>
+    <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/mlasakid.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Explain Machine Learning as to a Kid.</h2>
+                    <p class="card_text">Women Tech Network Global Conference 2021</p>
+                    <a href="https://www.womentech.net/speaker/Precious/Kolawole/50221"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/ml_healthcare.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Machine Learning in Healthcare for Beginners</h2>
+                    <p class="card_text">One Health Tech Ibadan</p>
+                    <a href="https://www.onehealthtech.com/post/oht-ibadan-event-recording-machine-learning-in-healthcare-for-beginners"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/trans_healthcare.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Transitioning into Data Science: Key Milestones for Success</h2>
+                    <p class="card_text">DataLab's Nigeria</p>
+                    <a href="https://datalab.com.ng/event/transitioning-into-data-science-key-milestones-for-success/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="/static/dsc_female.jpeg"></div>
+                <div class="card_content">
+                <h2 class="card_title">Achieving a Data Science Career as a Female</h2>
+                <p class="card_text">NACOS Subnet 2021</p>
+                <a href="https://nacos.org.ng/"><button class="btn card_btn">Check it out</button></a>
+                </div>
             </div>
-        </article>
-        <article class="card card--2">
-            <div class="card__img"></div>
-            <a href="#" class="card_link">
-                <div class="card__img--hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"> Test</span>
-                <h3 class="card__title">Check out where I've worked</h3>
-                <span class="card__by">by <a href="#" class="card__author" title="author">Precious</a></span>
-            </div>
-        </article>  
-    </section>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/first_job.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Landing Your First Tech Job as a Newbie</h2>
+                    <p class="card_text">MoinWorld Mentorship</p>
+                    <a href="https://moinworld.de/en/mentoring/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/careerstart_ds.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">How to Kickstart Your Career in Data Science</h2>
+                    <p class="card_text">Pydata Global 2021</p>
+                    <a href="https://pydata.org/global2021/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/telerehab.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Telerehabilitation</h2>
+                    <p class="card_text">Nigerian Association of Physiotherapy Students Conference 2021</p>
+                    <a href="https://www.nigaps.org/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="/static/enth_engineer.jpeg"></div>
+                    <div class="card_content">
+                    <h2 class="card_title">From Enthusiast to Engineer</h2>
+                    <p class="card_text">Data Ladies' Hangout</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="static/mains.js"></script>
 </body>
 </html>

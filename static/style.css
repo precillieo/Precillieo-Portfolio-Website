@@ -11,7 +11,7 @@ h2{
     padding-left: 10px;
 }
 p{
-    size: 12px;
+    size: 10rem;
     font-weight: 300;
     padding-left: 10px;
 }
@@ -21,6 +21,10 @@ li{
 }
 a{
     text-decoration: none;
+}
+hr{
+    color:rgb(255,0,97);
+    border-color:rgb(255,0,97);
 }
 .left,.right {
     height: 100%;
@@ -103,12 +107,14 @@ a{
     right: 45px;
     font-size: 30px;
 }
-.about-left {
-    flex: 50%;
+.about-left .about-right{
+    flex: 1;
+    
 }
-.about-right{
-    flex:50%;
+.about:first-child {
+    margin-right: 20px;
 }
+
 .about-left img{
     max-width:100%;
     border: 2px dashed rgb(255,0,97);
@@ -123,55 +129,15 @@ a{
 .about{
     display: flex;
 }
-.blog{
-    display:flex;
-    border-radius: 10px;
-    margin: 5px;
+
+/** Community**/
+.row a{
+    color:rgb(255,0,97) ;
 }
-.blog a{
-    color:black;
-    text-decoration: none;
-}
-.blogs {
-    border: 2px solid rgb(235, 235, 235);
-    background-color: rgb(255, 255, 255);
-    flex: 50%;
-    border-radius: 10px;
-    color: ghostwhite;
-    overflow: hidden;
-    padding:10px;
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 
-.blogs:hover {
-color: deepskyblue;
-transition: color 0.25s ease;
-}
-
-.blogs:after {
-    content: "";
-    position: absolute;
-    bottom: 101%;
-    left: 101%;
-    width: 100%;
-    height: 100%;
-    transform-origin: bottom;
-    background: rgb(255,0,97);
-    z-index: -1;
-    transition: all 0.25s ease;
-}
-
-.blogs:hover::after {
-    color: deepskyblue;
-    bottom: 0;
-    left: 0;
-}
-
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 20px;
-    top: 15px;
-    right: 35px;
-    }
-
-}
+/** Talks**/
