@@ -1,87 +1,285 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious Kolawole</title>
 
-<div class="main">
-    <ul class="cards">
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/mlasakid.jpeg"></div>
-            <div class="card_content">
-                <h2 class="card_title">Explain Machine Learning as to a Kid.</h2>
-                <p class="card_text">Women Tech Network Global Conference 2021</p>
-                <a href="https://www.womentech.net/speaker/Precious/Kolawole/50221"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/ml_healthcare.jpg"></div>
-            <div class="card_content">
-                <h2 class="card_title">Machine Learning in Healthcare for Beginners</h2>
-                <p class="card_text">One Health Tech Ibadan</p>
-                <a href="https://www.onehealthtech.com/post/oht-ibadan-event-recording-machine-learning-in-healthcare-for-beginners"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/trans_healthcare.jpeg"></div>
-            <div class="card_content">
-                <h2 class="card_title">Transitioning into Data Science: Key Milestones for Success</h2>
-                <p class="card_text">DataLab's Nigeria</p>
-                <a href="https://datalab.com.ng/event/transitioning-into-data-science-key-milestones-for-success/"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-        <div class="card">
-            <div class="card_image"><img class="talks" src="/static/dsc_female.jpeg"></div>
-            <div class="card_content">
-            <h2 class="card_title">Achieving a Data Science Career as a Female</h2>
-            <p class="card_text">NACOS Subnet 2021</p>
-            <a href="https://nacos.org.ng/"><button class="btn card_btn">Check it out</button></a>
-            </div>
+    <!--Styling-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97bbef3340.js" crossorigin="anonymous"></script>
+    <title>Precillieo's Portfolio</title>
+    <style>
+        .overlay-content li{
+            float:left;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        hr{
+            color:rgb(255,0,97);
+            border-color:rgb(255,0,97);
+        }
+        .socials{
+            padding-left: 10px;
+            padding-top: 50px;
+        }
+        .fa-brands{
+            padding-right:5px;
+            color: rgb(0, 0, 0);
+            
+        }
+        .menu{
+            text-align:right;
+            padding-right: 20px;
+            padding-top: 20px;
+            cursor:pointer;
+        }
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            padding-top: 10px;
+            top: 20%;
+            width: 100%;
+            text-align: left;
+            font-size: 8px;
+        }
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 30px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: rgb(255,0,97);
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 30px;
+        }
+        .main{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .btn {
+            color: #ffffff;
+            padding: 0.8rem;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-weight: 400;
+            display: block;
+            top:-20px;
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cards_item {
+            display: flex;
+            padding: 1rem;
+        }
+
+        @media (min-width: 40rem) {
+        .cards_item {
+            width: 50%;
+        }
+        }
+
+        @media (min-width: 56rem) {
+        .cards_item {
+            width: 30%;
+        }
+        }
+
+        .card {
+            background-color: rgb(255, 98, 158);
+            border-radius: 0.25rem;
+            box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card_content {
+            padding: 1rem;
+        }
+
+        .card_title {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin: 0px;
+        }
+
+        .card_text {
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1.25rem;    
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div id="Nav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+        <div class="overlay-content">
+            <a href="{{url_for('home')}}">Home</a>
+            <a href="{{ url_for('about')}}">About</a>
+            <a href="{{ url_for('portfolio')}}">Portfolio</a>
+            <a href="{{ url_for('blog')}}">Blogs</a>
+            <a href="{{ url_for('community')}}">Community</a>
+            <a href="{{ url_for('talks')}}">Talks</a>
+            <a href="{{ url_for('work')}}">Work Experiences</a>
+            <a href="{{ url_for('awards')}}">Awards, Achievements, and Certifications</a>
+            <hr>
+            <li><a href="https://www.linkedin.com/in/kolawole-precious-8723b2198/"><i class="fa-brands fa-linkedin-in fa-l"></i></a></li>
+                <li><a href="https://twitter.com/precillieo"><i class="fa-brands fa-twitter fa-l"></i></a></li>
+                <li><a href="https://precillieo.medium.com/"><i class="fa-brands fa-medium fa-l"></i></a></li>
+                <li><a href="https://github.com/Precillieo"><i class="fa-brands fa-github fa-l"></i></a></li>
+                <li><a href="https://precillieo.hashnode.dev/"><i class="fa-brands fa-hashnode fa-l"></i></a></li>
+                <li><a href="https://www.instagram.com/precillieo/"><i class="fa-brands fa-instagram fa-l"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCRuQ2z4TapeyNBPx0WT8ZbA"><i class="fa-brands fa-youtube fa-l"></i></a></li>
+            
         </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/first_job.jpeg"></div>
-            <div class="card_content">
-                <h2 class="card_title">Landing Your First Tech Job as a Newbie</h2>
-                <p class="card_text">MoinWorld Mentorship</p>
-                <a href="https://moinworld.de/en/mentoring/"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/careerstart_ds.jpg"></div>
-            <div class="card_content">
-                <h2 class="card_title">How to Kickstart Your Career in Data Science</h2>
-                <p class="card_text">Pydata Global 2021</p>
-                <a href="https://pydata.org/global2021/"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-            <div class="card_image"><img class="talks" src="/static/telerehab.jpg"></div>
-            <div class="card_content">
-                <h2 class="card_title">Telerehabilitation</h2>
-                <p class="card_text">Nigerian Association of Physiotherapy Students Conference 2021</p>
-                <a href="https://www.nigaps.org/"><button class="btn card_btn">Check it out</button></a>
-            </div>
-            </div>
-        </li>
-        <li class="cards_item">
-            <div class="card">
-                <div class="card_image"><img class="talks" src="/static/enth_engineer.jpeg"></div>
+    </div>
+    <div class="menu">
+        <i class="fa-solid fa-bars fa-2xl" onclick="openNav()"></i>
+    </div>
+    <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/mlasakid.jpeg"></div>
                 <div class="card_content">
-                <h2 class="card_title">From Enthusiast to Engineer</h2>
-                <p class="card_text">Data Ladies' Hangout</p>
+                    <h2 class="card_title">Explain Machine Learning as to a Kid.</h2>
+                    <p class="card_text">Women Tech Network Global Conference 2021</p>
+                    <a href="https://www.womentech.net/speaker/Precious/Kolawole/50221"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/ml_healthcare.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Machine Learning in Healthcare for Beginners</h2>
+                    <p class="card_text">One Health Tech Ibadan</p>
+                    <a href="https://www.onehealthtech.com/post/oht-ibadan-event-recording-machine-learning-in-healthcare-for-beginners"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/trans_healthcare.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Transitioning into Data Science: Key Milestones for Success</h2>
+                    <p class="card_text">DataLab's Nigeria</p>
+                    <a href="https://datalab.com.ng/event/transitioning-into-data-science-key-milestones-for-success/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="/static/dsc_female.jpeg"></div>
+                <div class="card_content">
+                <h2 class="card_title">Achieving a Data Science Career as a Female</h2>
+                <p class="card_text">NACOS Subnet 2021</p>
+                <a href="https://nacos.org.ng/"><button class="btn card_btn">Check it out</button></a>
                 </div>
             </div>
-        </li>
-    </ul>
-</div>
-{% endblock %}
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/first_job.jpeg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Landing Your First Tech Job as a Newbie</h2>
+                    <p class="card_text">MoinWorld Mentorship</p>
+                    <a href="https://moinworld.de/en/mentoring/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/careerstart_ds.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">How to Kickstart Your Career in Data Science</h2>
+                    <p class="card_text">Pydata Global 2021</p>
+                    <a href="https://pydata.org/global2021/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image"><img src="/static/telerehab.jpg"></div>
+                <div class="card_content">
+                    <h2 class="card_title">Telerehabilitation</h2>
+                    <p class="card_text">Nigerian Association of Physiotherapy Students Conference 2021</p>
+                    <a href="https://www.nigaps.org/"><button class="btn card_btn">Check it out</button></a>
+                </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img src="/static/enth_engineer.jpeg"></div>
+                    <div class="card_content">
+                    <h2 class="card_title">From Enthusiast to Engineer</h2>
+                    <p class="card_text">Data Ladies' Hangout</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="/static/mains.js"></script>
+</body>
+</html>
