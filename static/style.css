@@ -124,6 +124,7 @@ hr{
 }
 .about-image img{
     max-width: 50%;
+    height: 100px;
 }
 .skills p{
     font-size: 150%;
