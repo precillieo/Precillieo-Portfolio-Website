@@ -108,27 +108,25 @@ hr{
     font-size: 30px;
 }
 .about-left .about-right{
-    flex: 1;
-    
-}
-.about:first-child {
-    margin-right: 20px;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    overflow-x: hidden;
 }
 
-.about-left img{
-    max-width:100%;
-    border: 2px dashed rgb(255,0,97);
-    align-content: center;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-bottom-right-radius: 10px;
-    -moz-border-radius-topleft: 10px;
-    -moz-border-radius-bottomright: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.about-left{
+    left: 0;
 }
-.about{
-    display: flex;
+.about-right{
+    right: 0;
 }
+.about-image img{
+    max-width: 50%;
+}
+
+
 
 /** Community**/
 .row a{
@@ -140,89 +138,218 @@ hr{
     grid-gap: 20px;
 }
 
-/** Talks**/
-.main{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.talks{
-    padding: 1rem;
+/** Blogs**/
+.blogs{
+    background-color: rgb(243, 243, 243);
 }
 
-img {
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-}
+.blog-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 
-.btn {
-    color: #ffffff;
-    padding: 0.8rem;
-    font-size: 14px;
-    text-transform: uppercase;
+}
+.blog-row a{
+    color:rgb(255,0,97) ;
+}
+.blog-row .col{
+    background: #ffffff;
     border-radius: 4px;
-    font-weight: 400;
-    display: block;
-    top:-20px;
+    transition: background-color 2s;
+}
+.blog-row .col:hover{
+    color: #ffffff;
+    background-color:rgb(255,0,97) 
+    
+}
+.blog-row .col:hover a{
+    color: #ffffff;
+
+}
+/**Portfolio**/
+
+/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
+
+.accordion {
+    width: auto;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    padding: 45px 45px;
+}
+.accordion .pcontainer {
+    position: relative;
+    margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+position: relative;
+padding: 10px 0;
+font-size: 30px;
+color: black;
+cursor: pointer;
+}
+.label p{
+    font-size: 16px;
+}
+
+.content-image{
+    width: 50%;
+    right: 0;
+}
+.accordion .label::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 400; 
+    content: "+";
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+position: relative;
+background: white;
+height: 0;
+font-size: 20px;
+text-align: justify;
+width: 100%;
+overflow: hidden;
+transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+width: 100;
+margin-left: 0;
+color:rgb(255,0,97);
+}
+.accordion .pcontainer.active .content {
+    height: 100%;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .pcontainer.active .label::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 400; 
+    content: "-";
+}
+.content a{
+    color: rgb(255,0,97);
+}
+/*Awards*/
+.award_page{
+    box-sizing: border-box;
+}
+.awards {
+    display: flex;
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.award{
+    margin: 0 -5px;
+    max-width: 50%;
+}
+
+/* Clear floats after the columns */
+.award:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.award_content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .awards {
     width: 100%;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-
+    display: block;
+    margin-bottom: 20px;
+    }
 }
 
-.btn:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-}
-.cards {
+.award {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
+    justify-content: space-around;
+    padding: 1em 0;
+    text-align: left;
+}
+  
+.award_content {
+    width: 50%;
+    display: flex;
+    background: #eee;
+    padding: .8em 1.2em .8em .8em;
+    margin-bottom: 3em;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
+    border: solid 1px #ccc;
+}
+  
+.img {
+    min-width: 80px;
+    height: 80px;
+    border-radius: .3em;
+    background: linear-gradient(to bottom, #d6c091 0%, #C05C9A 100%);
+    opacity: .7;
+    margin: 0 .6em 0 0;
+    border: solid 1px firebrick;
+  }
+  
+  .card h3 {
     margin: 0;
-    padding: 0;
-}
-
-.cards_item {
-    display: flex;
-    padding: 1rem;
-}
-.card {
-    background-color: rgb(255, 98, 158);
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.card_content {
-    padding: 1rem;
-}
-
-.card_title {
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    margin: 0px;
-}
-
-.card_text {
-    color: #ffffff;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;    
-    font-weight: 400;
-}
-@media (min-width: 40rem) {
-    .cards_item {
-        width: 50%;
+    font-size: 1em;
+  }
+  
+  .content p {
+    margin: 0;
+    font-size: .7em;
+    color: #222;
+  }
+  
+  @media (max-width: 820px) {
+    .award {
+      min-width: auto;
+      display: block;
     }
+    .award_content {
+      width: 100%;
     }
+  }
+  
+  @media (max-width: 480px) {
+    .award_content {
+      box-shadow: none;
+    }
+  }
 
-@media (min-width: 56rem) {
-    .cards_item {
-        width: 33.3333%;
-    }
+/**Work Experience**/
+.work {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.wcontent p{
+    font-size: 100%;
 }
