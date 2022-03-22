@@ -1,0 +1,316 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+}
+h1{
+    font-weight: 900;
+    font-size: 70px;
+    padding-left: 10px;
+}
+h2{
+    padding-left: 10px;
+}
+p{
+    size: 10rem;
+    font-weight: 300;
+    padding-left: 10px;
+}
+li{
+    float:left;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    color:rgb(255,0,97);
+    border-color:rgb(255,0,97);
+}
+.left,.right {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+
+.container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+}
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+.socials{
+    padding-left: 10px;
+    padding-top: 50px;
+}
+.fa-brands{
+    padding-right:5px;
+    color: rgb(0, 0, 0);
+    
+}
+.menu{
+    text-align:right;
+    padding-right: 20px;
+    padding-top: 20px;
+    cursor:pointer;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    padding-top: 10px;
+    top: 20%;
+    width: 100%;
+    text-align: left;
+    font-size: 8px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: rgb(255,0,97);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+}
+.about-left .about-right{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    overflow-x: hidden;
+}
+
+.about-left{
+    left: 0;
+}
+.about-right{
+    right: 0;
+}
+.about-image img{
+    max-width: 50%;
+    height: 100px;
+}
+.skills p{
+    font-size: 150%;
+}
+.card-links{
+    margin: 0 auto;	
+	max-width: 948px;
+}
+.about-card-container {
+	align-items: start;
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: repeat(auto-fit, 300px);
+	justify-content: center;
+}
+
+
+/** Community**/
+.row a{
+    color:rgb(255,0,97) ;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+/** Blogs**/
+.blogs{
+    background-color: rgb(243, 243, 243);
+}
+
+.blog-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+.blog-row a{
+    color:rgb(255,0,97) ;
+}
+.blog-row .col{
+    background: #ffffff;
+    border-radius: 4px;
+    transition: background-color 2s;
+}
+.blog-row .col:hover{
+    color: #ffffff;
+    background-color:rgb(255,0,97) 
+    
+}
+.blog-row .col:hover a{
+    color: #ffffff;
+
+}
+/**Portfolio**/
+
+/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
+
+.accordion {
+    width: auto;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    padding: 45px 45px;
+}
+.accordion .pcontainer {
+    position: relative;
+    margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+position: relative;
+padding: 10px 0;
+font-size: 30px;
+color: black;
+cursor: pointer;
+}
+.label p{
+    font-size: 16px;
+}
+
+.content-image{
+    width: 50%;
+    right: 0;
+}
+.accordion .label::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 400; 
+    content: "+";
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+position: relative;
+background: white;
+height: 0;
+font-size: 20px;
+text-align: justify;
+width: 100%;
+overflow: hidden;
+transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+width: 100;
+margin-left: 0;
+color:rgb(255,0,97);
+}
+.accordion .pcontainer.active .content {
+    height: 100%;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .pcontainer.active .label::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 400; 
+    content: "-";
+}
+.content a{
+    color: rgb(255,0,97);
+}
+/*Awards*/
+
+.awards{
+    box-sizing: border-box;
+}
+.award-wrapper {
+    float: left;
+    width: 50%;
+
+}
+
+
+/* Remove extra left and right margins, due to padding */
+.award-row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.award-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .award-wrapper {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.award-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.award-card img{
+    width: 100%;
+    max-height: 300px;
+}
+
+/**Work Experience**/
+.work {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.wcontent p{
+    font-size: 100%;
+}

@@ -1,374 +1,87 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 {% block content %}
-
-
-<section class="about-me" id="about">
-	<h2 class="sub_heading">About Me</h2>
-
-	<div class="skill_tags">
-		<span class="tags">Data Scientist,</span>
-		<span class="tags">Machine Learning Engineer,</span>
-		<span class="tags">Frontend &,</span>
-		<span class="tags">Backend Developer</span>
+<br>
+<div class="about " style="overflow: auto;">
+	<div style="float: left; margin-top: 7%;">
+		<img src="static/about.jpg"  >
 	</div>
-</section>
+	<div style="float:right; width:50%; ">
+		<h1 style="color:rgb(255,0,97); font-size: 200%; ">Hi, I am Precillieo</h1>
+	<p>
+		I am an adept Data Scientist, proficient in Machine Learning,
+		Deep Learning, and Software Engineering for Data Science. I have a track record of products and solutions in the industry and community.
+		With broad experience in Machine Learning, I am passionate about solving various real-life problems by building end-to-end data science
+		and machine learning applications from data collection, exploratory analysis, visualizations,
+		predictive modeling to hosting and deploying models on cloud.
+	</p>
+	<p>
+		It is also worth mentioning my ever-growing goals and aspirations. I am a vision-driven individual trying to build necessary skills,
+		get on the right platforms (in terms of education and reach), make large-scale impacts on people and societies 
+		by being able to solve human problems and provide innovative solutions, with a strong focus on the intersection of Artificial Intelligence and Healthcare.
+	</p>
+	<p>
+		Along the way, I am big on open-source dev, community mentorship, meetups facilitation, speakership, technical writing, and passionate about helping tech muggles find their feet.
+	</p>
+	
+	</div>
+	
+</div>
 
-<section class="profile_container d-flex justify-space-between">
-	<!-- section for profile details -->
+<hr style="width: 30%;">
 
-	<section class="details_left">
-		<div class="avatar_container">
-			<img src="static/presh.jpg" alt="Precious On LabCoat" class="avatar">
+<div class="skills">
+	<h2 style="text-align:center; color: rgb(255,0,97);">Proficiency/Skills</h2>
+	<p> Data Science: Python, Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, PowerBI, Streamlit</p> 
+	<p>Machine Learning: Scikit-learn, Tensorflow, Keras.</p>
+	<p>Software Engineering: Data Structures and Algorithms, HTML, CSS, Flask, Postgresql, SQLite, Docker, Sendgrid API, Twilio API. </p>
+	<p>Others: Git and GitHub, Jupyter Notebook, Cloud Computing with Heroku and AWS, Technical Writing, Technical Presentation. </p>
+</div>
+<br>
+<hr style="width: 30%;">
+
+<section class="card-links">
+	<section class="about-card-container">
+
+		<div class="about-card">
+			<img src="/static/portfolio.jpg" style="max-width: 100%; max-height: 300px;">
+			<h2>Portfolio</h2>
+			<p>Cool stuff I've built</p>
 		</div>
-		<div class="profile_basic_data">
-			<div class="p_data">
-				<p class="p_data_content"><span class="icons_svg"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24" width="16" height="16">
-							<path fill-rule="evenodd"
-								d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z">
-							</path>
-						</svg></span>Precious Kolawole <span class="verified"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24" width="16" height="16">
-							<path
-								d="M17.03 9.78a.75.75 0 00-1.06-1.06l-5.47 5.47-2.47-2.47a.75.75 0 00-1.06 1.06l3 3a.75.75 0 001.06 0l6-6z">
-							</path>
-							<path fill-rule="evenodd"
-								d="M14.136 1.2a3.61 3.61 0 00-4.272 0L8.489 2.21a2.11 2.11 0 01-.929.384l-1.686.259a3.61 3.61 0 00-3.021 3.02L2.594 7.56a2.11 2.11 0 01-.384.929L1.2 9.864a3.61 3.61 0 000 4.272l1.01 1.375c.2.274.333.593.384.929l.259 1.686a3.61 3.61 0 003.02 3.021l1.687.259c.336.051.655.183.929.384l1.375 1.01a3.61 3.61 0 004.272 0l1.375-1.01a2.11 2.11 0 01.929-.384l1.686-.259a3.61 3.61 0 003.021-3.02l.259-1.687a2.11 2.11 0 01.384-.929l1.01-1.375a3.61 3.61 0 000-4.272l-1.01-1.375a2.11 2.11 0 01-.384-.929l-.259-1.686a3.61 3.61 0 00-3.02-3.021l-1.687-.259a2.11 2.11 0 01-.929-.384L14.136 1.2zm-3.384 1.209a2.11 2.11 0 012.496 0l1.376 1.01a3.61 3.61 0 001.589.658l1.686.258a2.11 2.11 0 011.765 1.766l.26 1.686a3.61 3.61 0 00.657 1.59l1.01 1.375a2.11 2.11 0 010 2.496l-1.01 1.376a3.61 3.61 0 00-.658 1.589l-.258 1.686a2.11 2.11 0 01-1.766 1.765l-1.686.26a3.61 3.61 0 00-1.59.657l-1.375 1.01a2.11 2.11 0 01-2.496 0l-1.376-1.01a3.61 3.61 0 00-1.589-.658l-1.686-.258a2.11 2.11 0 01-1.766-1.766l-.258-1.686a3.61 3.61 0 00-.658-1.59l-1.01-1.375a2.11 2.11 0 010-2.496l1.01-1.376a3.61 3.61 0 00.658-1.589l.258-1.686a2.11 2.11 0 011.766-1.766l1.686-.258a3.61 3.61 0 001.59-.658l1.375-1.01z">
-							</path>
-						</svg></span></p>
-				<p class="p_data_content"><span class="icons_svg"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 16 16" width="16" height="16">
-							<path fill-rule="evenodd"
-								d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z">
-							</path>
-						</svg> </span>Abeokuta, Nigeria</p>
-				<p class="p_data_content"><span class="icons_svg">Tel: </span>+2349020388009</p>
-				<p class="p_data_content"><span class="icons_svg"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24" width="16" height="16">
-							<path fill-rule="evenodd"
-								d="M1.75 3A1.75 1.75 0 000 4.75v14c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0024 18.75v-14A1.75 1.75 0 0022.25 3H1.75zM1.5 4.75a.25.25 0 01.25-.25h20.5a.25.25 0 01.25.25v.852l-10.36 7a.25.25 0 01-.28 0l-10.36-7V4.75zm0 2.662V18.75c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0L1.5 7.412z">
-							</path>
-						</svg></span> kolawoleprecious99@gmail.com</p>
-			</div>
-			<div class="p_data">
-				<h3 class="p-sub_head">Work Status</h3>
-				<p class="p_data_content">Data Scientist</p>
-			</div>
-			<div class="p_data">
-				<h3 class="p-sub_head">Education</h3>
-				<p class="p_data_content"><span class="icons_svg"><svg xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24" width="16" height="16">
-							<path fill-rule="evenodd"
-								d="M12.292 2.06a.75.75 0 00-.584 0L.458 6.81a.75.75 0 000 1.38L4.25 9.793v3.803a2.901 2.901 0 00-1.327.757c-.579.58-.923 1.41-.923 2.43v4.5c0 .248.128.486.335.624.06.04.117.073.22.124.124.062.297.138.52.213.448.149 1.09.288 1.925.288s1.477-.14 1.925-.288c.223-.075.396-.15.52-.213a2.11 2.11 0 00.21-.117A.762.762 0 008 21.28v-4.5c0-1.018-.344-1.85-.923-2.428a2.9 2.9 0 00-1.327-.758v-3.17l5.958 2.516a.75.75 0 00.584 0l5.208-2.2v4.003a2.552 2.552 0 01-.079.085 4.057 4.057 0 01-.849.65c-.826.488-2.255 1.021-4.572 1.021-.612 0-1.162-.037-1.654-.1a.75.75 0 00-.192 1.487c.56.072 1.173.113 1.846.113 2.558 0 4.254-.592 5.334-1.23.538-.316.914-.64 1.163-.896a2.84 2.84 0 00.392-.482h.001A.75.75 0 0019 15v-4.892l4.542-1.917a.75.75 0 000-1.382l-11.25-4.75zM5 15c-.377 0-.745.141-1.017.413-.265.265-.483.7-.483 1.368v4.022c.299.105.797.228 1.5.228s1.201-.123 1.5-.228V16.78c0-.669-.218-1.103-.483-1.368A1.431 1.431 0 005 15zm7-3.564L2.678 7.5 12 3.564 21.322 7.5 12 11.436z">
-							</path>
-						</svg></span>Bachelor Degree, Medical Rehabilitation</p>
-				<p> - Obafemi Awolowo University - <span>2020-2025</span></p>
-			</div>
+
+		<div class="about-card">
+			<img src="/static/blog.jpg" style="max-width: 100%; max-height: 300px;">
+			<h2>Blog</h2>
+			<p>Technical articles I've written</p>
 		</div>
-	</section>
 
-	<!-- section for readme, skills and jouney -->
-	<section class="details_right">
-		<div class="about-readme">
-			<p class="readme_text">I'm a Data Scientist who loves extracting knowledge and insights from structured and
-				unstructured data. Loves using my skills in technology to find trends, patterns, and manage data. Always
-				curious to explore what problems need to be solved and uncover solutions. A person of vision, depth,
-				tenacity, and capacity. Possesses go-getting, leadership and persistence spirit.</p>
-			<p class="readme_text">I'm a Medical Rehabilitation student with skills cutting across Data
-				Science, and Machine Learning. I'm skilled with using Python for Data Analysis, Machine Learning, Deep
-				Learning, and Backend Development. I'm a master of tools like SQL for querying Data from Databases,
-				PowerBI,
-				Plotly, and Tableau for analysis and visualization. </p>
-			<p class="readme_text">I aspire to bridge the gap between Health and Technology in order to make people
-				achieve
-				their HealthCare and
-				human safety goals. However, this has never been a roadblock in the furtherance of my career in
-				Technology
-				but an eye-opener to get more hidden human problems solved using AI.</p>
+		<div class="about-card">
+			<img src="/static/talk.jpg" style="max-width: 100%; max-height: 300px;">
+			<h2>Talks</h2>
+			<p>I speak too</p>
 		</div>
-		<div class="skill_box">
-			<h2 class="skill_heading">Skills</h2>
-			<div class="skill_list">
-				<div class="skill_sub_heading">
-					<h3>Programming</h3>
-				</div>
-				<div class="skill_data_container d-flex flex-wrap">
-					<div class="skill_data mr-1">
-						<span class="skill_lang"><span class="skill_color c-orange"></span> Python</span>
-					</div>
-				</div>
-			</div>
-				<div class="skill_list">
-					<div class="skill_sub_heading">
-						<h3>Data Science</h3>
-					</div>
-					<div class="skill_data_container d-flex flex-wrap">
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Pandas</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Numpy</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Matplotlib</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Seaborn</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>PowerBI</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Tableau</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Plotly</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Inferential Statistics</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span>Descriptive Statistics</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill_list">
-					<div class="skill_sub_heading">
-						<h3>Machine Learning</h3>
-					</div>
-					<div class="skill_data_container d-flex flex-wrap">
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-yellow"></span> Supervised ML</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-yellow"></span>Unsupervised ML</span>
-						</div>
-						<!--<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-yellow"></span>K-Means</span>
-						</div>-->
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-yellow"></span>Tensorflow(Keras)</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill_list">
-					<div class="skill_sub_heading">
-						<h3>Web Development</h3>
-					</div>
-					<div class="skill_data_container d-flex flex-wrap">
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-blue"></span>HTML</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-blue"></span>CSS</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-blue"></span>SQLite</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-blue"></span>Flask</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-blue"></span>Heroku Deployment</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill_list">
-					<div class="skill_sub_heading">
-						<h3>Tools</h3>
-					</div>
-					<div class="skill_data_container d-flex flex-wrap">
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-orange"></span> Git & GitHub</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-orange"></span> Jupyter Notebook</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-orange"></span> Google Colab</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-orange"></span> Kaggle Kernel</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill_list">
-					<div class="skill_sub_heading">
-						<h3>Others</h3>
-					</div>
-					<div class="skill_data_container d-flex flex-wrap">
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span> Technical Writing</span>
-						</div>
-						<div class="skill_data mr-1">
-							<span class="skill_lang"><span class="skill_color c-green"></span> Technical
-								Presentation</span>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!-- skill box -->
+	
+		<div class="about-card">
+			<img src="/static/awards.jpg" style="max-width: 100%; max-height: 300px; max-height: 50%;">
+			<h2>Awards and Achievement</h2>
+			<p>Recognition for my work</p>
 		</div>
-		<div class="timeline_heading">
-			<h3>Tech Journey</h3>
+
+		
+		<div class="about-card">
+			<img src="/static/work_experience.jpg" style="max-width: 100%; max-height: 300px;">
+			<h2>Work Experience</h2>
+			<p>Places I've worked.</p>
 		</div>
-		<div class="timeline_box">
-			<!-- timeline data here -->
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_date">
-					<p class="date_">2nd Jan, 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.coursera.org/learn/dermatology">Dermatology Course</a>
-					<p>Trip to skin professional Course on Coursera.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.coursera.org/learn/ai-for-everyone">AI For Everyone</a>
-					<p>AI terminologies, feasibilities and strategies.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.udacity.com/course/introduction-to-python--ud1110">Python Programming</a>
-					<p>Programming best practices on Udacity..</p>
-				</div>
-			</div>
 
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_date">
-					<p class="date_">Feb-May 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://365datascience.com/courses/intro-to-data-and-data-science/">Intro To Data And Data
-						Science</a>
-					<p>Intuition behind Data Science Field on 365 Data Science.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://365datascience.com/courses/statistics/">Probability And Statistics</a>
-					<p>Analyze data using python on Cognitive Class AI.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://cognitiveclass.ai/courses/data-analysis-python">Data Analysis With Python</a>
-					<p>Analyze data using python on Cognitive Class AI.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://cognitiveclass.ai/courses/data-visualization-with-python">Data Visualization With
-						Python</a>
-					<p>Visualize data using python on Cognitive Class AI.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://cognitiveclass.ai/courses/machine-learning-with-python">Machine Learning With
-						Python</a>
-					<p>Supervised, Unsupervised, Statistical Modelling on Cognitive Class AI.</p>
-				</div>
-			</div>
-
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_sub_heading">
-					<p>She Code Africa Mentorship Program</p>
-				</div>
-				<div class="timeline_date">
-					<p class="date_">June-August 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.udacity.com/course/sql-for-data-analysis--ud198">Structured Query Language</a>
-					<p>Extract and analyze data stored in databases on Udacity.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.datacamp.com/courses/introduction-to-power-bi">PowerBI Course</a>
-					<p>Explore and build impactful report on Data Camp.
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.udacity.com/course/intro-to-machine-learning--ud120">Intro To Tableau</a>
-					<p>Generate insights and interactive visuals on Udacity.</p>
-				</div>
-			</div>
-
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_date">
-					<p class="date_">Sept-October 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.coursera.org/specializations/deep-learning">Deep Learning Specialization</a>
-					<p>The fundamental of deep learning on Coursera_Not Yet Done.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.youtube.com/watch?v=7x2YZhEj9Dw&feature=youtu.be">Deep Learning With Python</a>
-					<p>Machine Learning Tutorial with Neural Network on Youtube.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.datacamp.com/courses/introduction-to-git-for-data-science">Git And Github</a>
-					<p>Version Control with Git on DataCamp.</p>
-				</div>
-			</div>
-
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_date">
-					<p class="date_">Nov 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.datacamp.com/courses/object-oriented-programming-in-python">Object Oriented
-						Programming In Python</a>
-					<p>Create classes and leverage inheritance and polymorphism on DataCamp.</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.youtube.com/watch?v=7x2YZhEj9Dw&feature=youtu.be">Python Flask Tutorial</a>
-					<p>Get started with Flask Framework on Youtube.</p>
-				</div>
-			</div>
-
-			<div class="timeline-badge">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-					<path fill-rule="evenodd"
-						d="M12.185 21.5c4.059 0 7.065-2.84 7.065-6.75 0-2.337-1.093-3.489-2.678-5.158l-.021-.023c-1.44-1.517-3.139-3.351-3.649-6.557a6.14 6.14 0 00-1.911 1.76c-.787 1.144-1.147 2.633-.216 4.495.603 1.205.777 2.74-.277 3.794-.657.657-1.762 1.1-2.956.586-.752-.324-1.353-.955-1.838-1.79-.567.706-.954 1.74-.954 2.893 0 3.847 3.288 6.75 7.435 6.75zm2.08-19.873c-.017-.345-.296-.625-.632-.543-2.337.575-6.605 4.042-4.2 8.854.474.946.392 1.675.004 2.062-.64.64-1.874.684-2.875-1.815-.131-.327-.498-.509-.803-.334-1.547.888-2.509 2.86-2.509 4.899 0 4.829 4.122 8.25 8.935 8.25 4.812 0 8.565-3.438 8.565-8.25 0-2.939-1.466-4.482-3.006-6.102-1.61-1.694-3.479-3.476-3.479-7.021z">
-					</path>
-				</svg>
-			</div>
-			<div class="timelinebody">
-				<div class="timeline_date">
-					<p class="date_">Dec 2020</p>
-				</div>
-				<div class="timeline_data">
-					<a href="https://www.freecodecamp.org/learn/">Web Design Certification</a>
-					<p>HTML, CSS, Applied Visual Design on FreeCode Camp.</p>
-				</div>
-			</div>
+		<div class="about-card">
+			<img src="/static/community.jpg" style="max-width: 100%; max-height: 300px;">
+			<h2>Community</h2>
+			<p>Communities I help run</p>
 		</div>
+	
 	</section>
 </section>
+
 
 {% endblock %}
+

@@ -1,272 +1,67 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 {% block content %}
-<div class="portfolio-intro">
-	<p class="portfolio_intro_text">Data Preprocessing, Analysis, Data Visualization, Supervised Machine Learning, Deep
-		Learning,
-		Computer Vision, Web Development are my area of expertise. My portfolio of projects consists of different topics
-		and
-		I continuously expand it. One of my newest projects is this website which I built from scratch with HTML, CSS,
-		Python and Flask. Scroll down to view the rest of my projects presented below with links to the code, blog posts
-		and
-		deployed projects.</p>
+<div class="accordion-body">
+	<div class="accordion">
+		<div class="pcontainer">
+			<div class="label">Elixir Cancer Diagnosis AI-Based System</div>
+			<div class="content">
+					<p>Built a Deep Convolutional Neural Network model and a web app that screens microscopic images so as to detect cancer, thus increasing speed, accuracy in cancer diagnosis, and testing. </p>
+					<p>Handed over to doctors in Tanzania's labs for tests and usage. </p>
+					<p class="links"><a href="https://github.com/Precillieo/Elixir-Cancer-Diagnosis-AI-Based-System">See more on Github!</a></p>
+			</div>
+		</div>
+	<hr>
+	    <div class="pcontainer">
+			<div class="label">Tackling Online Harassment Through Allies</div>
+			<div class="content"> 
+					<p>2 in every 5 women have experienced different forms of online harassment, my team and I built a working solution called <a href="https://safecyber.herokuapp.com/">"SafeCyber"</a> to help tackle this through alpes.</p>
+					<p>Victim or friend of victim reports a case of harassment by filling the onpne form. </p>
+					<p>Built a classifier model of about 80% accuracy, predicts and categorizes the form data: into harassment types and action to be taken. </p>
+					<p>Form data and predictions are saved in the admin database. Records are also forwarded to the decision-makers within the ally organization. </p>
+					<p>This has helped eliminate physical and emotional stress in about 1000 women. </p>
+					<p class="links"><a href="https://github.com/Precillieo/SafeCyber">See more on Github!</a></p>
+					<p class="links"><a href="https://youtu.be/TzCN2mVJ-WI">See more on Youtube!</a></p>
+			</div>
+	  	</div>
+	<hr>
+		<div class="pcontainer">
+			<div class="label">Wikimedia Data Dump Extraction</div>
+			<div class="content">
+				<p>Developed an approach by working on the Wikipedia data dump, API pages, and Protection Pages.</p>
+				<p>Used Python packages in decompressing and extracting data from the dump.</p>  
+				<p>Did statistical analysis and sophisticated visualizations to generate insights from the data.</p> 
+				<p>Moreso, stacked ml algorithms were used to predict if a protection type can be edited or moved and we achieved about 75% accuracy.</p>
+				<p class="links"><a href="https://github.com/Precillieo/Outreachy-Internship-Final-Contribution">See more on Github!</a></p>
+			</div>
+		</div>
+	<hr>
+		<div class="pcontainer">
+			<div class="label">Big Cities Health Data Exploratory Analysis</div>
+			<div class="content">
+				<p>This visualizes the health data and the indicators causing morbidity and mortality in the National, States, and the Local Agencies of the United States.</p>
+				<p>The data illustrates health status of 26 of the nation's largest and most urban cities as captured by 34 Health(and six demographic-related) Indicators. 
+					Public health data were captured in 9 categories: HIV/AIDS, Cancer, Nutrition/ Physical Activity/ Obesity, Food Safety, Infection Diseases, Maternal, and Child Health, Tobacco, Injury/Violence, and Health/ Substance Abuse.</p>
+				<p class="links"><a href="https://github.com/Precillieo/Big-Cities-Health-Data-Analysis/blob/master/Cities%20Health%20Notebook.ipynb">See more on Github!</a></p>
+				</div>
+		</div>
+	<hr>
+		<div class="pcontainer">
+			<div class="label">Smart Contracts and DAPPs</div>
+			<div class="content">
+				<p>Built a <a href="https://choice-coin-the-best.herokuapp.com/">functional frontend integration</a> with Algorand Python SDK that allows connection to a user's wallet via Algo Signer and AlgoMobileWallet on an Algorand Standard Asset, Choice Coin, a voting software that powers decentralized decisions built directly on the Algorand Blockchain.</p>
+				<p class="links"><a href="https://github.com/Precillieo/Choice-Coin">See more on Github!</a></p>
+			</div>
+		</div>
+	<hr>
+		<div class="pcontainer">
+			<div class="label">Full-Featured Web App with Flask</div>
+			<div class="content">
+				<p>Built a <a href="https://kola-blog.herokuapp.com/">Blogging Web App </a> with features like forms, that allows users to input and upload pictures, perform account authentication, interact with posts, reset email and password, with Blueprint, a well-configured Custom Error Pages and a Sqlalchemy Database.</p>
+				<p>This was deployed on Heroku.</p>
+				<p class="links"><a href="https://github.com/Precillieo/Full-Featured-Web-App-With-Flask">See more on Github!</a></p>
+			</div>
+	  	</div>
+	<hr>
+	</div>
 </div>
-
-
-<section class="my-work" id="work">
-	<h2 class="portfolio_title">Project Portfolio</h2>
-
-
-	<div class="portfolio_container d-flex flex-wrap justify-flex-start">
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/elixirthr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">Elixir Cancer Diagnosis AI-Based
-					System</div>
-				<div class="description">Went through the stage of Data Collection and Preprocessing. Built a
-					Deep CNN model and a web app that screens microscopic images so as to detect
-					cancer, thus increasing speed, accuracy in cancer diagnosis, and testing.</div>
-				<div class="languages">Python, EDA, Keras, Image Processing(Computer Vision)</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a
-							href="https://medium.com/swlh/convolutional-neural-network-for-detecting-cancer-tumors-in-microscopic-images-1acab6481d05"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="blog_link"><a
-							href="https://youtu.be/Pfgfh4DJToo"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="github"><a
-							href="https://github.com/Precillieo/Elixir-Cancer-Diagnosis-AI-Based-System"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/outreachthr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">Outreachy Internship Final
-					Contribution
-					System</div>
-				<div class="description">Worked on the Wikipedia dump data and protection pages by decompressing
-					and extracting the data, statistical analysis, complex visualizations to
-					generate insights from the data. ML algorithms were used to predict if a
-					protection type can be edited or moved</div>
-				<div class="languages">Python, EDA, Regex, Visualization, Feature Engineering, Supervised ML</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="github"><a
-							href="https://github.com/Precillieo/Outreachy-Internship-Final-Contribution"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/server.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">Full Featured Web App With Flask</div>
-				<div class="description">Built a Blog Web App with features like forms, user inputs, pictures, accounts
-					authentication, DB with SQLAlchemy, Interaction with Posts, Email and Password Reset,
-					Blueprints, Custom Error Pages, finally, Deployment on Heroku.</div>
-				<div class="languages">Python, HTML, CSS, SQLAlchemy, Flask, JavaScript, BootStrap, Heroku</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a href="https://kola-blog.herokuapp.com/"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a></div>
-					<div class="github"><a href="https://github.com/Precillieo/Full-Featured-Web-App-With-Flask"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/loanthr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title"> Loan Default Prediction Model</div>
-				<div class="description">At LendSQR, I built, deployed, and tested an ML model as a REST API in predicting which customers will default on their loans based on their financial information and historical data.</div>
-				<div class="languages">Python, EDA, Data Visualization, Feature Engineering, Supervised
-					ML, Web Development, Heroku Deployment</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a
-							href="https://medium.com/datadriveninvestor/can-you-predict-customers-loan-default-using-machine-learning-be774489b8f5"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="github"><a href="https://github.com/Precillieo/Loan-Default-Prediction"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/pothr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">My Data Science Portfolio Website</div>
-				<div class="description">One of my newest projects is this website which I built from scratch to
-					leverage my Data
-					Science career with HTML, CSS, Python and Flask.</div>
-				<div class="languages">Python, HTML, CSS, Flask, JavaScript, Bootstrap</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a
-							href="https://precillieo.hashnode.dev/first-steps-into-building-your-data-science-portfolio-website"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="github"><a href="https://github.com/Precillieo/Precillieo-Portfolio-Website"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
-							height="16">
-							<path fill-rule="evenodd"
-								d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-							</path>
-						</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/plotthr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">World Universities Ranking</div>
-				<div class="description">Used Plotly Python graphing library in making interactive visuals and
-					generating intuitions
-					from the world universities data.</div>
-				<div class="languages">Python, Data Wrangling, Data Visualization, Plotly</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="github"><a href="https://github.com/Precillieo/Plotly-Tutorial-For-Beginners"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/healththr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">Big Cities Health Inventory Data
-					Exploration</div>
-				<div class="description">This visualizes the health data and the indicators causing morbidity and
-					mortality in the
-					National, States, and the Local Agencies of the United States</div>
-				<div class="languages">Python, Data Wrangling, Data Visualization, Supervised ML</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a
-							href="https://medium.com/aiplusoau/big-cities-health-inventory-data-exploration-8409e75916f"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="github"><a href="https://github.com/Precillieo/Big-Cities-Health"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="portfolio_items d-flex justify-space-between">
-			<div class="portfolio_thumbnail">
-				<img src="static/twentythr.jpg" alt="portfolio_thumbnails" class="meta_img">
-			</div>
-			<div class="portfolio_detail">
-				<div class="title">Detailed Analysis Of Covid-19 Data</div>
-				<div class="description">Generating interactive visuals, facts and insights on the World’s Covid-19
-					situation
-					through Python Exploratory Data Analysis.</div>
-				<div class="languages">Python, Data Wrangling, Data Visualization, Supervised ML</div>
-				<div class="links d-flex justify-flex-start">
-					<div class="blog_link"><a
-							href="https://medium.com/swlh/detailed-analysis-of-covid-19-data-6a17e579693f"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-								<path
-									d="M14.78 3.653a3.936 3.936 0 115.567 5.567l-3.627 3.627a3.936 3.936 0 01-5.88-.353.75.75 0 00-1.18.928 5.436 5.436 0 008.12.486l3.628-3.628a5.436 5.436 0 10-7.688-7.688l-3 3a.75.75 0 001.06 1.061l3-3z">
-								</path>
-								<path
-									d="M7.28 11.153a3.936 3.936 0 015.88.353.75.75 0 001.18-.928 5.436 5.436 0 00-8.12-.486L2.592 13.72a5.436 5.436 0 107.688 7.688l3-3a.75.75 0 10-1.06-1.06l-3 3a3.936 3.936 0 01-5.567-5.568l3.627-3.627z">
-								</path>
-							</svg></a>
-					</div>
-					<div class="github"><a
-							href="https://github.com/Precillieo/SCA-mp-C2-Assignments/blob/master/Week4/Covid-19%20notebook.ipynb"><svg
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-								<path fill-rule="evenodd"
-									d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-								</path>
-							</svg></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-</section>
 {% endblock %}
