@@ -2,11 +2,11 @@
 {% block content %}
 <br>
 <div class="about " style="overflow: auto;">
-	<div style="float:left; width:50%">
+	<div style="float: left; margin-top: 7%;">
 		<img src="static/about.jpg"  >
 	</div>
-	<div style="float:right; width:50%">
-		<h1>Hi, I am Precillieo</h1>
+	<div style="float:right; width:50%; ">
+		<h1 style="color:rgb(255,0,97); font-size: 200%; ">Hi, I am Precillieo</h1>
 	<p>
 		I am an adept Data Scientist, proficient in Machine Learning,
 		Deep Learning, and Software Engineering for Data Science. I have a track record of products and solutions in the industry and community.
@@ -22,83 +22,66 @@
 	<p>
 		Along the way, I am big on open-source dev, community mentorship, meetups facilitation, speakership, technical writing, and passionate about helping tech muggles find their feet.
 	</p>
-	<br>
-	<h2>Proficiency/Skills</h2>
-	<p>Data Science: Python, Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, PowerBI, Streamlit</p> 
-	<p>Machine Learning: Scikit-learn, Tensorflow, Keras.</p>
-	<p>Software Engineering: Data Structures and Algorithms, HTML, CSS, Flask, Postgresql, SQLite, Docker, Sendgrid API, Twilio API. </p>
-	<p>Others: Git and GitHub, Jupyter Notebook, Cloud Computing with Heroku and AWS, Technical Writing, Technical Presentation. </p>
+	
 	</div>
 	
 </div>
 
+<hr style="width: 30%;">
+
+<div class="skills">
+	<h2 style="text-align:center; color: rgb(255,0,97);">Proficiency/Skills</h2>
+	<p> Data Science: Python, Pandas, Numpy, Matplotlib, Seaborn, Plotly, Tableau, PowerBI, Streamlit</p> 
+	<p>Machine Learning: Scikit-learn, Tensorflow, Keras.</p>
+	<p>Software Engineering: Data Structures and Algorithms, HTML, CSS, Flask, Postgresql, SQLite, Docker, Sendgrid API, Twilio API. </p>
+	<p>Others: Git and GitHub, Jupyter Notebook, Cloud Computing with Heroku and AWS, Technical Writing, Technical Presentation. </p>
+</div>
 <br>
-<br>
-<section class="cards">
-	<article class="card card--1">
-		<div class="card__img"></div>
-			<a href="#" class="card_link">
-				<div class="card__img--hover"></div>
-			</a>
-		<div class="card__info">
-			<span class="card__category"> Test</span>
-			<h3 class="card__title">I speak</h3>
+<hr style="width: 30%;">
+
+<section class="card-links">
+	<section class="about-card-container">
+
+		<div class="about-card">
+			<img src="/static/portfolio.jpg" style="max-width: 100%;">
+			<h2>Portfolio</h2>
+			<p>Cool stuff I've built</p>
 		</div>
-	</article>
-	<article class="card card--2">
-		<div class="card__img"></div>
-		<a href="#" class="card_link">
-			<div class="card__img--hover"></div>
-		</a>
-		<div class="card__info">
-			<span class="card__category"> Community</span>
-			<h3 class="card__title">Communities I help run</h3>
+
+		<div class="about-card">
+			<img src="/static/blog.jpg" style="max-width: 100%;">
+			<h2>Blog</h2>
+			<p>Technical articles I've written</p>
 		</div>
-	</article>  
-	<article class="card card--3">
-		<div class="card__img"></div>
-		<a href="#" class="card_link">
-			<div class="card__img--hover"></div>
-		</a>
-		<div class="card__info">
-			<span class="card__category"> Awards</span>
-			<h3 class="card__title">Recognition for my work</h3>
+
+		<div class="about-card">
+			<img src="/static/talk.jpg" style="max-width: 100%;">
+			<h2>Talks</h2>
+			<p>I speak too</p>
 		</div>
-	</article> 
-	<article class="card card--4">
-		<div class="card__img"></div>
-			<a href="#" class="card_link">
-				<div class="card__img--hover"></div>
-			</a>
-		<div class="card__info">
-			<span class="card__category"> Work experience</span>
-			<h3 class="card__title">Places I've worked</h3>
+	
+		<div class="about-card">
+			<img src="/static/awards.jpg" style="max-width: 100%; max-height: 50%;">
+			<h2>Awards and Achievement</h2>
+			<p>Recognition for my work</p>
 		</div>
-	</article>
-	<article class="card card--5">
-		<div class="card__img"></div>
-		<a href="#" class="card_link">
-			<div class="card__img--hover"></div>
-		</a>
-		<div class="card__info">
-			<span class="card__category"> Portfolio</span>
-			<h3 class="card__title">Some cool stuff I built</h3>
+
+		
+		<div class="about-card">
+			<img src="/static/work_experience.jpg" style="max-width: 100%;">
+			<h2>Work Experience</h2>
+			<p>Places I've worked.</p>
 		</div>
-	</article>  
-	<article class="card card--6">
-		<div class="card__img"></div>
-		<a href="#" class="card_link">
-			<div class="card__img--hover"></div>
-		</a>
-		<div class="card__info">
-			<span class="card__category"> Blog</span>
-			<h3 class="card__title">Recognition for my work</h3>
+
+		<div class="about-card">
+			<img src="/static/community.jpg" style="max-width: 100%;">
+			<h2>Community</h2>
+			<p>Communities I help run</p>
 		</div>
-	</article> 
+	
+	</section>
 </section>
+
 
 {% endblock %}
 
-<div class="right">
-	
-</div>
